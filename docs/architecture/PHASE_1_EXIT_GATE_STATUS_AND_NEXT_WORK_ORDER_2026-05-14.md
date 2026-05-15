@@ -77,7 +77,7 @@ This file below contains the earlier blocked-state history and should now be rea
     - `SENTRY_DSN`
 - `pnpm build` passes.
 - Contract grep checks passed:
-  - no `stay22.com` outside `src/lib/stay22.ts`
+  - no Stay22 booking/embed URLs outside `src/lib/stay22.ts`
   - empty-schema `cms-fields.json` drift baseline passes
   - no hardcoded route content under `src/app/**` fetching from non-Payload sources
 - `pnpm payload migrate:create init` succeeded and generated `src/migrations/20260515_031408_init.ts`.

@@ -68,6 +68,16 @@ export interface Config {
   blocks: {};
   collections: {
     users: User;
+    pages: Page;
+    destinations: Destination;
+    desks: Desk;
+    regions: Region;
+    bestOf: BestOf;
+    compares: Compare;
+    posts: Post;
+    legal: Legal;
+    briefs: Brief;
+    media: Media;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -76,6 +86,16 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
+    destinations: DestinationsSelect<false> | DestinationsSelect<true>;
+    desks: DesksSelect<false> | DesksSelect<true>;
+    regions: RegionsSelect<false> | RegionsSelect<true>;
+    bestOf: BestOfSelect<false> | BestOfSelect<true>;
+    compares: ComparesSelect<false> | ComparesSelect<true>;
+    posts: PostsSelect<false> | PostsSelect<true>;
+    legal: LegalSelect<false> | LegalSelect<true>;
+    briefs: BriefsSelect<false> | BriefsSelect<true>;
+    media: MediaSelect<false> | MediaSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -85,8 +105,22 @@ export interface Config {
     defaultIDType: number;
   };
   fallbackLocale: null;
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    navigation: Navigation;
+    footer: Footer;
+    viaiveStandard: ViaiveStandard;
+    proof: Proof;
+    newsletter: Newsletter;
+    novaExitIntent: NovaExitIntent;
+  };
+  globalsSelect: {
+    navigation: NavigationSelect<false> | NavigationSelect<true>;
+    footer: FooterSelect<false> | FooterSelect<true>;
+    viaiveStandard: ViaiveStandardSelect<false> | ViaiveStandardSelect<true>;
+    proof: ProofSelect<false> | ProofSelect<true>;
+    newsletter: NewsletterSelect<false> | NewsletterSelect<true>;
+    novaExitIntent: NovaExitIntentSelect<false> | NovaExitIntentSelect<true>;
+  };
   locale: null;
   widgets: {
     collections: CollectionsWidget;
@@ -142,6 +176,614 @@ export interface User {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: number;
+  slug: string;
+  title: string;
+  seo?: {
+    metaTitle?: string | null;
+    metaDescription?: string | null;
+    ogImage?: (number | null) | Media;
+    canonical?: string | null;
+    noindex?: boolean | null;
+  };
+  blocks?:
+    | (
+        | {
+            eyebrow?: string | null;
+            headline?: string | null;
+            italicHeadline?: string | null;
+            lede?: string | null;
+            primaryCta?: {
+              label?: string | null;
+              href?: string | null;
+            };
+            secondaryCta?: {
+              label?: string | null;
+              href?: string | null;
+            };
+            image?: (number | null) | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'HeroBlock';
+          }
+        | {
+            items?:
+              | {
+                  label?: string | null;
+                  logo?: (number | null) | Media;
+                  href?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'TrustBarBlock';
+          }
+        | {
+            cards?:
+              | {
+                  eyebrow?: string | null;
+                  title?: string | null;
+                  blurb?: string | null;
+                  href?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'IntentRouterBlock';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'DesksBlock';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'AtlasBlock';
+          }
+        | {
+            title?: string | null;
+            italicTitle?: string | null;
+            eyebrow?: string | null;
+            destinations?: (number | Destination)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'DestinationsRailBlock';
+          }
+        | {
+            destination?: (number | null) | Destination;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'DestinationGuideBlock';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'StandardBlock';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'EditorialBlock';
+          }
+        | {
+            title?: string | null;
+            lede?: string | null;
+            defaultDestination?: string | null;
+            disclosureText?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'StayModuleBlock';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ProofBlock';
+          }
+        | {
+            title?: string | null;
+            lede?: string | null;
+            fields?:
+              | {
+                  /**
+                   * Field key, camelCase. E.g. fullName, email, dates, partySize, budget, notes
+                   */
+                  name: string;
+                  label: string;
+                  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'date' | 'number' | 'checkbox';
+                  required?: boolean | null;
+                  placeholder?: string | null;
+                  helpText?: string | null;
+                  options?:
+                    | {
+                        label?: string | null;
+                        value?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  /**
+                   * HTML autocomplete attr: name, email, tel, etc.
+                   */
+                  autocomplete?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            submitLabel?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'BriefBlock';
+          }
+        | {
+            overrideTitle?: string | null;
+            overrideLede?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'EmailCaptureBlock';
+          }
+        | {
+            title?: string | null;
+            items?:
+              | {
+                  question?: string | null;
+                  answer?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'FAQBlock';
+          }
+      )[]
+    | null;
+  reviewStatus?: ('draft' | 'staging' | 'readyForReview' | 'approved' | 'live' | 'archived') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media".
+ */
+export interface Media {
+  id: number;
+  alt: string;
+  credit?: string | null;
+  license?: ('owned' | 'licensed' | 'editorial') | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "destinations".
+ */
+export interface Destination {
+  id: number;
+  slug: string;
+  city: string;
+  country: string;
+  region?: (number | null) | Region;
+  lat: number;
+  lng: number;
+  bestMonths?: string | null;
+  leadTime?: string | null;
+  readMinutes?: number | null;
+  lastReviewed?: string | null;
+  heroEyebrow?: string | null;
+  h1: string;
+  h1Italic?: string | null;
+  /**
+   * ≤55 words. The first paragraph an AI Overview will quote.
+   */
+  geoAnswer: string;
+  hotels?:
+    | {
+        name: string;
+        tier?: ('Palace' | 'Resort' | 'Boutique' | 'Villa' | 'Riad' | 'Ryokan') | null;
+        neighborhood?: string | null;
+        note?: string | null;
+        cover?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  watch2026?:
+    | {
+        kind?: ('Opening' | 'Refurb' | 'Watch') | null;
+        title?: string | null;
+        note?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  sections?:
+    | {
+        h2?: string | null;
+        /**
+         * Use {{Hotel Name}} markers to auto-generate Stay22 deep links.
+         */
+        body?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+      }[]
+    | null;
+  ctaEyebrow?: string | null;
+  ctaHeadline?: string | null;
+  ctaBody?: string | null;
+  conciergeIntent?: string | null;
+  featured?: boolean | null;
+  seo?: {
+    metaTitle?: string | null;
+    metaDescription?: string | null;
+    ogImage?: (number | null) | Media;
+  };
+  reviewStatus?: ('draft' | 'staging' | 'readyForReview' | 'approved' | 'live' | 'archived') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "regions".
+ */
+export interface Region {
+  id: number;
+  slug?: string | null;
+  name?: string | null;
+  lead?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  destinations?: (number | Destination)[] | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "desks".
+ */
+export interface Desk {
+  id: number;
+  slug: string;
+  name: string;
+  eyebrow?: string | null;
+  lede?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  specialties?:
+    | {
+        label?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  leadTime?: string | null;
+  priceFloor?: string | null;
+  ctaHref?: string | null;
+  sampleBriefs?:
+    | {
+        title?: string | null;
+        outcome?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  faq?:
+    | {
+        question?: string | null;
+        answer?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+      }[]
+    | null;
+  reviewStatus?: ('draft' | 'staging' | 'readyForReview' | 'approved' | 'live' | 'archived') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bestOf".
+ */
+export interface BestOf {
+  id: number;
+  slug?: string | null;
+  title?: string | null;
+  intro?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  methodology?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  ranking?:
+    | {
+        rank?: number | null;
+        hotel?: string | null;
+        verdict?: string | null;
+        note?: string | null;
+        /**
+         * Leave blank for auto Stay22 deep link.
+         */
+        bookHref?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  faq?:
+    | {
+        question?: string | null;
+        answer?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+      }[]
+    | null;
+  seo?: {
+    metaTitle?: string | null;
+    metaDescription?: string | null;
+  };
+  reviewStatus?: ('draft' | 'staging' | 'readyForReview' | 'approved' | 'live' | 'archived') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "compares".
+ */
+export interface Compare {
+  id: number;
+  slug?: string | null;
+  title?: string | null;
+  intro?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  comparisonTable?:
+    | {
+        criterion?: string | null;
+        optionA?: string | null;
+        optionB?: string | null;
+        optionC?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  verdict?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  faq?:
+    | {
+        question?: string | null;
+        answer?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+      }[]
+    | null;
+  reviewStatus?: ('draft' | 'staging' | 'readyForReview' | 'approved' | 'live' | 'archived') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "posts".
+ */
+export interface Post {
+  id: number;
+  slug?: string | null;
+  title?: string | null;
+  dek?: string | null;
+  author?: string | null;
+  publishedAt?: string | null;
+  cover?: (number | null) | Media;
+  readMinutes?: number | null;
+  body?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  tags?:
+    | {
+        label?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  reviewStatus?: ('draft' | 'staging' | 'readyForReview' | 'approved' | 'live' | 'archived') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal".
+ */
+export interface Legal {
+  id: number;
+  slug?: string | null;
+  title?: string | null;
+  lastUpdated?: string | null;
+  body?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  partners?:
+    | {
+        name?: string | null;
+        role?: string | null;
+        active?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Inbox for concierge intake. Not publicly readable.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "briefs".
+ */
+export interface Brief {
+  id: number;
+  intent?: string | null;
+  desk?: string | null;
+  name?: string | null;
+  email?: string | null;
+  phone?: string | null;
+  dates?: string | null;
+  partySize?: number | null;
+  budget?: string | null;
+  notes?: string | null;
+  source?: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -163,10 +805,51 @@ export interface PayloadKv {
  */
 export interface PayloadLockedDocument {
   id: number;
-  document?: {
-    relationTo: 'users';
-    value: number | User;
-  } | null;
+  document?:
+    | ({
+        relationTo: 'users';
+        value: number | User;
+      } | null)
+    | ({
+        relationTo: 'pages';
+        value: number | Page;
+      } | null)
+    | ({
+        relationTo: 'destinations';
+        value: number | Destination;
+      } | null)
+    | ({
+        relationTo: 'desks';
+        value: number | Desk;
+      } | null)
+    | ({
+        relationTo: 'regions';
+        value: number | Region;
+      } | null)
+    | ({
+        relationTo: 'bestOf';
+        value: number | BestOf;
+      } | null)
+    | ({
+        relationTo: 'compares';
+        value: number | Compare;
+      } | null)
+    | ({
+        relationTo: 'posts';
+        value: number | Post;
+      } | null)
+    | ({
+        relationTo: 'legal';
+        value: number | Legal;
+      } | null)
+    | ({
+        relationTo: 'briefs';
+        value: number | Brief;
+      } | null)
+    | ({
+        relationTo: 'media';
+        value: number | Media;
+      } | null);
   globalSlug?: string | null;
   user: {
     relationTo: 'users';
@@ -233,6 +916,443 @@ export interface UsersSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  slug?: T;
+  title?: T;
+  seo?:
+    | T
+    | {
+        metaTitle?: T;
+        metaDescription?: T;
+        ogImage?: T;
+        canonical?: T;
+        noindex?: T;
+      };
+  blocks?:
+    | T
+    | {
+        HeroBlock?:
+          | T
+          | {
+              eyebrow?: T;
+              headline?: T;
+              italicHeadline?: T;
+              lede?: T;
+              primaryCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                  };
+              secondaryCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                  };
+              image?: T;
+              id?: T;
+              blockName?: T;
+            };
+        TrustBarBlock?:
+          | T
+          | {
+              items?:
+                | T
+                | {
+                    label?: T;
+                    logo?: T;
+                    href?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        IntentRouterBlock?:
+          | T
+          | {
+              cards?:
+                | T
+                | {
+                    eyebrow?: T;
+                    title?: T;
+                    blurb?: T;
+                    href?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        DesksBlock?:
+          | T
+          | {
+              id?: T;
+              blockName?: T;
+            };
+        AtlasBlock?:
+          | T
+          | {
+              id?: T;
+              blockName?: T;
+            };
+        DestinationsRailBlock?:
+          | T
+          | {
+              title?: T;
+              italicTitle?: T;
+              eyebrow?: T;
+              destinations?: T;
+              id?: T;
+              blockName?: T;
+            };
+        DestinationGuideBlock?:
+          | T
+          | {
+              destination?: T;
+              id?: T;
+              blockName?: T;
+            };
+        StandardBlock?:
+          | T
+          | {
+              id?: T;
+              blockName?: T;
+            };
+        EditorialBlock?:
+          | T
+          | {
+              id?: T;
+              blockName?: T;
+            };
+        StayModuleBlock?:
+          | T
+          | {
+              title?: T;
+              lede?: T;
+              defaultDestination?: T;
+              disclosureText?: T;
+              id?: T;
+              blockName?: T;
+            };
+        ProofBlock?:
+          | T
+          | {
+              id?: T;
+              blockName?: T;
+            };
+        BriefBlock?:
+          | T
+          | {
+              title?: T;
+              lede?: T;
+              fields?:
+                | T
+                | {
+                    name?: T;
+                    label?: T;
+                    type?: T;
+                    required?: T;
+                    placeholder?: T;
+                    helpText?: T;
+                    options?:
+                      | T
+                      | {
+                          label?: T;
+                          value?: T;
+                          id?: T;
+                        };
+                    autocomplete?: T;
+                    id?: T;
+                  };
+              submitLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        EmailCaptureBlock?:
+          | T
+          | {
+              overrideTitle?: T;
+              overrideLede?: T;
+              id?: T;
+              blockName?: T;
+            };
+        FAQBlock?:
+          | T
+          | {
+              title?: T;
+              items?:
+                | T
+                | {
+                    question?: T;
+                    answer?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+      };
+  reviewStatus?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "destinations_select".
+ */
+export interface DestinationsSelect<T extends boolean = true> {
+  slug?: T;
+  city?: T;
+  country?: T;
+  region?: T;
+  lat?: T;
+  lng?: T;
+  bestMonths?: T;
+  leadTime?: T;
+  readMinutes?: T;
+  lastReviewed?: T;
+  heroEyebrow?: T;
+  h1?: T;
+  h1Italic?: T;
+  geoAnswer?: T;
+  hotels?:
+    | T
+    | {
+        name?: T;
+        tier?: T;
+        neighborhood?: T;
+        note?: T;
+        cover?: T;
+        id?: T;
+      };
+  watch2026?:
+    | T
+    | {
+        kind?: T;
+        title?: T;
+        note?: T;
+        id?: T;
+      };
+  sections?:
+    | T
+    | {
+        h2?: T;
+        body?: T;
+        id?: T;
+      };
+  ctaEyebrow?: T;
+  ctaHeadline?: T;
+  ctaBody?: T;
+  conciergeIntent?: T;
+  featured?: T;
+  seo?:
+    | T
+    | {
+        metaTitle?: T;
+        metaDescription?: T;
+        ogImage?: T;
+      };
+  reviewStatus?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "desks_select".
+ */
+export interface DesksSelect<T extends boolean = true> {
+  slug?: T;
+  name?: T;
+  eyebrow?: T;
+  lede?: T;
+  specialties?:
+    | T
+    | {
+        label?: T;
+        id?: T;
+      };
+  leadTime?: T;
+  priceFloor?: T;
+  ctaHref?: T;
+  sampleBriefs?:
+    | T
+    | {
+        title?: T;
+        outcome?: T;
+        id?: T;
+      };
+  faq?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
+        id?: T;
+      };
+  reviewStatus?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "regions_select".
+ */
+export interface RegionsSelect<T extends boolean = true> {
+  slug?: T;
+  name?: T;
+  lead?: T;
+  destinations?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bestOf_select".
+ */
+export interface BestOfSelect<T extends boolean = true> {
+  slug?: T;
+  title?: T;
+  intro?: T;
+  methodology?: T;
+  ranking?:
+    | T
+    | {
+        rank?: T;
+        hotel?: T;
+        verdict?: T;
+        note?: T;
+        bookHref?: T;
+        id?: T;
+      };
+  faq?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
+        id?: T;
+      };
+  seo?:
+    | T
+    | {
+        metaTitle?: T;
+        metaDescription?: T;
+      };
+  reviewStatus?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "compares_select".
+ */
+export interface ComparesSelect<T extends boolean = true> {
+  slug?: T;
+  title?: T;
+  intro?: T;
+  comparisonTable?:
+    | T
+    | {
+        criterion?: T;
+        optionA?: T;
+        optionB?: T;
+        optionC?: T;
+        id?: T;
+      };
+  verdict?: T;
+  faq?:
+    | T
+    | {
+        question?: T;
+        answer?: T;
+        id?: T;
+      };
+  reviewStatus?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "posts_select".
+ */
+export interface PostsSelect<T extends boolean = true> {
+  slug?: T;
+  title?: T;
+  dek?: T;
+  author?: T;
+  publishedAt?: T;
+  cover?: T;
+  readMinutes?: T;
+  body?: T;
+  tags?:
+    | T
+    | {
+        label?: T;
+        id?: T;
+      };
+  reviewStatus?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "legal_select".
+ */
+export interface LegalSelect<T extends boolean = true> {
+  slug?: T;
+  title?: T;
+  lastUpdated?: T;
+  body?: T;
+  partners?:
+    | T
+    | {
+        name?: T;
+        role?: T;
+        active?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "briefs_select".
+ */
+export interface BriefsSelect<T extends boolean = true> {
+  intent?: T;
+  desk?: T;
+  name?: T;
+  email?: T;
+  phone?: T;
+  dates?: T;
+  partySize?: T;
+  budget?: T;
+  notes?: T;
+  source?: T;
+  createdAt?: T;
+  updatedAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media_select".
+ */
+export interface MediaSelect<T extends boolean = true> {
+  alt?: T;
+  credit?: T;
+  license?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -270,6 +1390,354 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "navigation".
+ */
+export interface Navigation {
+  id: number;
+  brand?: {
+    wordmark?: (number | null) | Media;
+    href?: string | null;
+  };
+  primaryLinks?:
+    | {
+        label: string;
+        href: string;
+        id?: string | null;
+      }[]
+    | null;
+  ctaLabel?: string | null;
+  ctaHref?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer".
+ */
+export interface Footer {
+  id: number;
+  columns?:
+    | {
+        title?: string | null;
+        links?:
+          | {
+              label?: string | null;
+              href?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  legalLinks?:
+    | {
+        label?: string | null;
+        href?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  disclosure?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  socialLinks?:
+    | {
+        platform?: ('instagram' | 'x' | 'linkedin' | 'substack') | null;
+        href?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "viaiveStandard".
+ */
+export interface ViaiveStandard {
+  id: number;
+  intro?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  criteria?:
+    | {
+        title: string;
+        body: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        };
+        icon?: ('bed' | 'compass' | 'scroll' | 'key' | 'leaf' | 'scales' | 'heart') | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "proof".
+ */
+export interface Proof {
+  id: number;
+  metrics?:
+    | {
+        value?: string | null;
+        label?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  quotes?:
+    | {
+        body?: string | null;
+        attribution?: string | null;
+        role?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "newsletter".
+ */
+export interface Newsletter {
+  id: number;
+  title?: string | null;
+  lede?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  placeholder?: string | null;
+  consentText?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  successText?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "novaExitIntent".
+ */
+export interface NovaExitIntent {
+  id: number;
+  headline?: string | null;
+  italicHeadline?: string | null;
+  body?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  ctaLabel?: string | null;
+  ctaHref?: string | null;
+  dismissLabel?: string | null;
+  minDwellSec?: number | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "navigation_select".
+ */
+export interface NavigationSelect<T extends boolean = true> {
+  brand?:
+    | T
+    | {
+        wordmark?: T;
+        href?: T;
+      };
+  primaryLinks?:
+    | T
+    | {
+        label?: T;
+        href?: T;
+        id?: T;
+      };
+  ctaLabel?: T;
+  ctaHref?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer_select".
+ */
+export interface FooterSelect<T extends boolean = true> {
+  columns?:
+    | T
+    | {
+        title?: T;
+        links?:
+          | T
+          | {
+              label?: T;
+              href?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  legalLinks?:
+    | T
+    | {
+        label?: T;
+        href?: T;
+        id?: T;
+      };
+  disclosure?: T;
+  socialLinks?:
+    | T
+    | {
+        platform?: T;
+        href?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "viaiveStandard_select".
+ */
+export interface ViaiveStandardSelect<T extends boolean = true> {
+  intro?: T;
+  criteria?:
+    | T
+    | {
+        title?: T;
+        body?: T;
+        icon?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "proof_select".
+ */
+export interface ProofSelect<T extends boolean = true> {
+  metrics?:
+    | T
+    | {
+        value?: T;
+        label?: T;
+        id?: T;
+      };
+  quotes?:
+    | T
+    | {
+        body?: T;
+        attribution?: T;
+        role?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "newsletter_select".
+ */
+export interface NewsletterSelect<T extends boolean = true> {
+  title?: T;
+  lede?: T;
+  placeholder?: T;
+  consentText?: T;
+  successText?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "novaExitIntent_select".
+ */
+export interface NovaExitIntentSelect<T extends boolean = true> {
+  headline?: T;
+  italicHeadline?: T;
+  body?: T;
+  ctaLabel?: T;
+  ctaHref?: T;
+  dismissLabel?: T;
+  minDwellSec?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
