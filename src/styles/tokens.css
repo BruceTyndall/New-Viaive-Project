@@ -1,0 +1,54 @@
+/* ─── Viaive Design Tokens — Digital Stone & Paper ─────────────────────────
+   Source of truth: docs/figma/source/docs/design-tokens.json v1.0.0
+   All values transcribed verbatim. Do not add tokens not present in the JSON.
+────────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Color ------------------------------------------------------------------ */
+  --paper:              #F9F7F2;  /* Primary background, warm cream */
+  --paper-alt:          #F4F1EA;  /* Inset/recessed surfaces */
+  --stone:              #1a1a1a;  /* Ink, borders, dark sections */
+  --stone-alt:          #0b0b0c;  /* Deep tile interior on dark rails */
+  --stone-mid:          #4A4A4A;  /* Secondary text on paper */
+  --gold:               #c8a96a;  /* Accent, affiliate flag, hover signature */
+  --gold-soft:          rgba(200, 169, 106, 0.4); /* Dividers, low-emphasis borders */
+  --white:              #FFFFFF;  /* Type on dark sections only */
+  --muted:              #9aa3b2;  /* Refurb / neutral status */
+  --success-editorial:  #5f7a5b;  /* Reserved — approved badge */
+  --warning-editorial:  #a06a2c;  /* Reserved — review-needed */
+
+  /* Border patterns -------------------------------------------------------- */
+  --border-hairline:    1px solid rgba(26, 26, 26, 0.10);
+  --border-rule:        2px solid #1a1a1a;
+  --border-rule-gold:   2px solid #c8a96a;
+  --border-rule-on-dark: 2px solid rgba(255, 255, 255, 0.20);
+
+  /* Space ------------------------------------------------------------------ */
+  --space-0:   0;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+
+  /* Duration (raw vars for inline `transition-duration` use) --------------- */
+  --duration-fast:    150ms;
+  --duration-base:    200ms;
+  --duration-slow:    300ms;
+  --duration-scroll:  600ms;
+
+  /* Layout ----------------------------------------------------------------- */
+  --container-max:      1280px;
+  --gutter-mobile:      24px;
+  --gutter-desktop:     48px;
+  --measure:            70ch;
+  --sidebar-sticky-top: 112px;
+}

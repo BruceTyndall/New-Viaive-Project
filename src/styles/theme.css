@@ -1,0 +1,45 @@
+/* ─── Tailwind v4 @theme — Viaive token registration ────────────────────────
+   Maps raw tokens (tokens.css :root) to Tailwind utility namespaces.
+   --color-*   → bg-*, text-*, border-* utilities
+   --font-*    → font-* utilities
+   --shadow-*  → shadow-* utilities
+   --ease-*    → ease-* utilities (transition timing)
+   --z-*       → z-* utilities
+────────────────────────────────────────────────────────────────────────────── */
+
+@theme inline {
+  /* Colors ----------------------------------------------------------------- */
+  --color-paper:             var(--paper);
+  --color-paper-alt:         var(--paper-alt);
+  --color-stone:             var(--stone);
+  --color-stone-alt:         var(--stone-alt);
+  --color-stone-mid:         var(--stone-mid);
+  --color-gold:              var(--gold);
+  --color-gold-soft:         var(--gold-soft);
+  --color-white:             var(--white);
+  --color-muted:             var(--muted);
+  --color-success-editorial: var(--success-editorial);
+  --color-warning-editorial: var(--warning-editorial);
+
+  /* Fonts — defined directly (no :root counterpart to avoid conflict) ------- */
+  --font-display: 'Fraunces', serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  /* Shadows — solid color offsets only, zero blur -------------------------- */
+  --shadow-paper-lift:      6px 6px 0 0 #1a1a1a;
+  --shadow-paper-lift-gold: 6px 6px 0 0 #c8a96a;
+  --shadow-paper-lift-lg:   8px 8px 0 0 #c8a96a;
+  --shadow-paper-lift-xl:   12px 12px 0 0 #1a1a1a;
+  --shadow-press:           0 0 0 0 transparent;
+
+  /* Easing ----------------------------------------------------------------- */
+  --ease-stone: cubic-bezier(0.2, 0.7, 0.2, 1); /* decisive — buttons, links */
+  --ease-paper: cubic-bezier(0.4, 0, 0.2, 1);   /* settle — modals, drawers */
+
+  /* Z-index ---------------------------------------------------------------- */
+  --z-base:        0;
+  --z-rail:        10;
+  --z-nav:         40;
+  --z-modal:       80;
+  --z-exit-intent: 90;
+}
