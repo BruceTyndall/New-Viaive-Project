@@ -98,6 +98,8 @@ POSTHOG_KEY                     # Phase 5 optional; not required for the Phase 1
 SENTRY_DSN                      # Phase 5 optional; not required for the Phase 1 exit gate
 ```
 
+For Supabase Session Pooler DSNs used by Node `pg` v8 in this repo, `DATABASE_URL` must include `uselibpqcompat=true` alongside `sslmode=require`.
+
 Service role keys live **server-side only**; never expose to the client.
 
 ---
@@ -117,6 +119,7 @@ Service role keys live **server-side only**; never expose to the client.
 | 9 | Image rights drift on hotel covers | Medium | `media.license` field required; nightly audit script flags `editorial` license on non-editorial routes |
 | 10 | Concierge brief inbox PII leak | High | `briefs` collection has zero public read access; Payload access control enforced; encrypt-at-rest via Supabase |
 | 11 | Observability remains deferred during Phase 1 bootstrap | Low | `POSTHOG_KEY` and `SENTRY_DSN` are Phase 5 optional and are not part of the Phase 1 exit gate |
+| 12 | Supabase Session Pooler TLS semantics differ under Node `pg` v8 | Low | Keep `uselibpqcompat=true&sslmode=require` on the Session Pooler `DATABASE_URL` so Payload can connect cleanly during Phase 1 |
 
 ---
 

@@ -12,6 +12,39 @@ Use this file instead of relying on chat continuity.
 
 ---
 
+## Update 2026-05-15
+
+Phase 1 Exit Gate is now green.
+
+- `doppler run --config stg -- node scripts/check-contract-env.mjs`: pass
+- `doppler run --config stg -- pnpm payload migrate`: pass
+- direct Postgres verification over the live Session Pooler DSN confirmed `current_database() = payload_staging` and these public tables now exist:
+  - `payload_kv`
+  - `payload_locked_documents`
+  - `payload_locked_documents_rels`
+  - `payload_migrations`
+  - `payload_preferences`
+  - `payload_preferences_rels`
+  - `users`
+  - `users_sessions`
+- `pnpm dev` booted cleanly and `GET /admin` returned `200`
+- `pnpm build`: pass clean
+- R2 round-trip smoke: pass via 1-byte object upload and public read from `NEXT_PUBLIC_R2_PUBLIC_URL`
+
+Important correction:
+
+- `DATABASE_URL` now uses the Supabase Session Pooler, and for this Node / `pg` stack it must include `uselibpqcompat=true&sslmode=require`.
+- `scripts/check-contract-env.mjs` was updated to validate Session Pooler DSNs by project-ref suffix in the username, not only by direct-hostname matching.
+
+Users-footprint conclusion remains the same:
+
+- `users` and `users_sessions` are internal Payload admin-auth infrastructure.
+- `src/payload.config.ts` keeps that auth collection explicit and hidden, so visible collections remain effectively `[]`.
+
+This file below contains the earlier blocked-state history and should now be read as historical context, not current blocker state.
+
+---
+
 ## Repo Scope
 
 - Repo: `/Users/brucetyndall/Projects/GitHub/New Viaive Project`

@@ -50,6 +50,7 @@ const optionalPhase5 = [posthogKey, sentryDsn]
 
 let databaseHost = 'n/a'
 let databaseName = 'n/a'
+let databaseUsername = 'n/a'
 let databaseProjectMatches = false
 let databaseNameMatches = false
 
@@ -57,8 +58,11 @@ if (database.value) {
   try {
     const parsed = new URL(database.value)
     databaseHost = parsed.hostname
+    databaseUsername = parsed.username || 'n/a'
     databaseName = parsed.pathname.replace(/^\//, '') || 'n/a'
-    databaseProjectMatches = databaseHost.includes(expectedSupabaseProjectRef)
+    databaseProjectMatches =
+      databaseHost.includes(expectedSupabaseProjectRef) ||
+      databaseUsername.endsWith(`.${expectedSupabaseProjectRef}`)
     databaseNameMatches = expectedDatabases.has(databaseName)
   } catch (error) {
     databaseHost = `invalid (${error instanceof Error ? error.message : 'parse failed'})`
@@ -91,6 +95,7 @@ if (!derivedR2Endpoint) {
 
 console.log('')
 console.log(`Supabase host: ${databaseHost}`)
+console.log(`Supabase user: ${databaseUsername}`)
 console.log(`Supabase database: ${databaseName}`)
 console.log(
   `${databaseProjectMatches ? 'PASS' : 'FAIL'} DATABASE_URL project ref matches ${expectedSupabaseProjectRef}`,
