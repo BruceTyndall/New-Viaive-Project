@@ -1,0 +1,92 @@
+{
+  "$schema": "viaive.assets.v1",
+  "version": "1.0.0",
+  "updated": "2026-05-14",
+  "storage": {
+    "provider": "cloudflare-r2",
+    "bucket": "viaive-media",
+    "publicBase": "https://media.viaive.com",
+    "uploadAdapter": "@payloadcms/storage-r2"
+  },
+  "conventions": {
+    "format": "avif",
+    "fallback": "webp",
+    "naming": "kebab-case, lowercase, no version suffix",
+    "altRequired": true
+  },
+  "slots": [
+    { "slot": "hero.desktop", "aspect": "4:3", "srcSize": "2400x1800", "serveMax": "180KB", "loading": "eager", "fetchpriority": "high" },
+    { "slot": "hero.mobile", "aspect": "4:5", "srcSize": "1600x2000", "serveMax": "120KB", "loading": "eager" },
+    { "slot": "destinationTile", "aspect": "4:5", "srcSize": "1600x2000", "serveMax": "90KB", "loading": "lazy" },
+    { "slot": "hotelCover", "aspect": "4:5", "srcSize": "1200x1500", "serveMax": "70KB", "loading": "lazy" },
+    { "slot": "editorialCover", "aspect": "3:2", "srcSize": "1800x1200", "serveMax": "90KB", "loading": "lazy" },
+    { "slot": "ogImage", "aspect": "1.91:1", "srcSize": "1200x630", "serveMax": "120KB" },
+    { "slot": "trustLogo", "aspect": "auto", "format": "svg", "inlineMax": "8KB" }
+  ],
+  "manifests": {
+    "destinations": {
+      "tokyo": {
+        "hero": "media/destinations/tokyo/hero.avif",
+        "hotels": {
+          "aman-tokyo": "media/destinations/tokyo/hotels/aman-tokyo.avif",
+          "janu-tokyo": "media/destinations/tokyo/hotels/janu-tokyo.avif",
+          "bulgari-tokyo": "media/destinations/tokyo/hotels/bulgari-tokyo.avif",
+          "edition-toranomon": "media/destinations/tokyo/hotels/edition-toranomon.avif",
+          "hoshinoya-tokyo": "media/destinations/tokyo/hotels/hoshinoya-tokyo.avif",
+          "four-seasons-otemachi": "media/destinations/tokyo/hotels/four-seasons-otemachi.avif",
+          "park-hyatt-tokyo": "media/destinations/tokyo/hotels/park-hyatt-tokyo.avif",
+          "capella-tokyo": "media/destinations/tokyo/hotels/capella-tokyo.avif"
+        }
+      },
+      "bangkok": {
+        "hero": "media/destinations/bangkok/hero.avif",
+        "hotels": {
+          "mandarin-oriental-bangkok": "media/destinations/bangkok/hotels/mandarin-oriental-bangkok.avif",
+          "the-peninsula-bangkok": "media/destinations/bangkok/hotels/the-peninsula-bangkok.avif",
+          "capella-bangkok": "media/destinations/bangkok/hotels/capella-bangkok.avif",
+          "park-hyatt-bangkok": "media/destinations/bangkok/hotels/park-hyatt-bangkok.avif",
+          "rosewood-bangkok": "media/destinations/bangkok/hotels/rosewood-bangkok.avif",
+          "sindhorn-kempinski": "media/destinations/bangkok/hotels/sindhorn-kempinski.avif",
+          "the-siam-hotel": "media/destinations/bangkok/hotels/the-siam-hotel.avif",
+          "four-seasons-chao-phraya": "media/destinations/bangkok/hotels/four-seasons-chao-phraya.avif"
+        }
+      },
+      "maldives": {
+        "hero": "media/destinations/maldives/hero.avif",
+        "hotels": {
+          "soneva-jani": "media/destinations/maldives/hotels/soneva-jani.avif",
+          "soneva-fushi": "media/destinations/maldives/hotels/soneva-fushi.avif",
+          "cheval-blanc-randheli": "media/destinations/maldives/hotels/cheval-blanc-randheli.avif",
+          "one-and-only-reethi-rah": "media/destinations/maldives/hotels/one-and-only-reethi-rah.avif",
+          "joali": "media/destinations/maldives/hotels/joali.avif",
+          "six-senses-laamu": "media/destinations/maldives/hotels/six-senses-laamu.avif",
+          "waldorf-astoria-ithaafushi": "media/destinations/maldives/hotels/waldorf-astoria-ithaafushi.avif",
+          "ritz-carlton-fari-islands": "media/destinations/maldives/hotels/ritz-carlton-fari-islands.avif"
+        }
+      },
+      "paris": { "hero": "media/destinations/paris/hero.avif", "hotels": "TODO: 8 properties" },
+      "dubai": { "hero": "media/destinations/dubai/hero.avif", "hotels": "TODO: 8 properties" }
+    },
+    "desks": {
+      "hotel": "media/desks/hotel/hero.avif",
+      "family": "media/desks/family/hero.avif",
+      "safari": "media/desks/safari/hero.avif",
+      "concierge": "media/desks/concierge/hero.avif",
+      "asia": "media/desks/asia/hero.avif"
+    },
+    "bestOf": {
+      "tokyo-hotels": "media/best-of/tokyo-hotels/rank-{1-8}.avif",
+      "paris-hotels": "media/best-of/paris-hotels/rank-{1-8}.avif"
+    },
+    "brand": {
+      "wordmark": "media/brand/wordmark.svg",
+      "mark": "media/brand/mark.svg",
+      "ogDefault": "media/brand/og-default.avif",
+      "fallback": "media/brand/fallback.avif"
+    }
+  },
+  "altTextRules": {
+    "pattern": "[subject] — [location], [year]",
+    "disallowedPhrases": ["luxury hotel room","beautiful resort","vacation","amazing","stunning"]
+  }
+}

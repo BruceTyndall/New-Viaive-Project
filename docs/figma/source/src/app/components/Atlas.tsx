@@ -1,0 +1,86 @@
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+
+const ATLAS = [
+  { href: "/destinations/tokyo", name: "Tokyo", country: "Japan", note: "The vertical standard", img: "https://images.unsplash.com/photo-1604928141064-207cea6f571f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200", span: "lg:col-span-2 lg:row-span-2" },
+  { href: "/destinations/paris", name: "Paris", country: "France", note: "Gallic standard", img: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" },
+  { href: "/destinations/maldives", name: "Maldives", country: "Resort decision guide", note: "27 resorts audited", img: "https://images.unsplash.com/photo-1614350391736-ed8619d63c06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" },
+  { href: "/destinations/italy", name: "Italy", country: "Amalfi · Lake Como", note: "Mediterranean mandate", img: "https://images.unsplash.com/photo-1627599139213-6f5649231b38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" },
+  { href: "/destinations/st-barths", name: "St. Barths", country: "French West Indies", note: "Villa-first audit", img: "https://images.unsplash.com/photo-1683510157012-01a812870de9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" },
+  { href: "/destinations/aspen", name: "Aspen", country: "Colorado", note: "Ski-week placement", img: "https://images.unsplash.com/photo-1643089757971-2ed227b68211?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" },
+];
+
+export function Atlas() {
+  return (
+    <section className="bg-[#f6f3ee] py-28 lg:py-36" id="atlas">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
+          <div className="max-w-2xl">
+            <div className="text-[11px] tracking-[0.32em] uppercase text-black/50 mb-5">
+              The Viaive Atlas · 27 Cities Audited
+            </div>
+            <h2
+              style={{
+                fontFamily: "Fraunces, serif",
+                fontSize: "clamp(36px, 4.4vw, 60px)",
+                lineHeight: 1.02,
+                letterSpacing: "-0.02em",
+                fontWeight: 400,
+                color: "#1a1a1a",
+              }}
+            >
+              Field guides for the
+              <br />
+              <em style={{ fontWeight: 300 }}>places we'd actually return to.</em>
+            </h2>
+          </div>
+          <a
+            href="/destinations"
+            className="inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-black/70 hover:text-black border-b border-black/20 hover:border-black pb-1 transition self-start lg:self-end"
+          >
+            View the full atlas →
+          </a>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-4 lg:gap-5 lg:h-[720px]">
+          {ATLAS.map((d, i) => (
+            <a
+              key={d.href}
+              href={d.href}
+              className={`group relative overflow-hidden bg-black ${d.span ?? ""} ${
+                i === 0 ? "col-span-2" : ""
+              }`}
+            >
+              <ImageWithFallback
+                src={d.img}
+                alt={`Luxury travel guide to ${d.name} — Viaive Atlas`}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1400ms]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/30 group-hover:from-black/70 transition" />
+              <div className="relative h-full min-h-[260px] p-6 lg:p-8 flex flex-col justify-end text-white">
+                <div className="text-[10px] tracking-[0.3em] uppercase text-white/60 mb-2">
+                  {d.country}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "Fraunces, serif",
+                    fontSize: i === 0 ? "48px" : "30px",
+                    lineHeight: 1,
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  {d.name}
+                </div>
+                <div className="mt-2 text-[13px] text-white/70 italic" style={{ fontFamily: "Fraunces, serif" }}>
+                  — {d.note}
+                </div>
+                <div className="mt-4 text-[11px] tracking-[0.24em] uppercase text-[#e8c98a] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                  Read the field guide →
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

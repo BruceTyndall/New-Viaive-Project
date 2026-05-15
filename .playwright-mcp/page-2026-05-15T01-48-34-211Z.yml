@@ -1,0 +1,1092 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to content" [ref=e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e4]:
+      - navigation [ref=e5]:
+        - link "Viaive home" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: viaive
+          - generic [ref=e9]: Editorial Intelligence
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - button "Desks" [ref=e12]
+          - listitem [ref=e13]:
+            - link "Atlas" [ref=e14] [cursor=pointer]:
+              - /url: /destinations
+          - listitem [ref=e15]:
+            - link "Regions" [ref=e16] [cursor=pointer]:
+              - /url: /regions
+          - listitem [ref=e17]:
+            - link "The Standard" [ref=e18] [cursor=pointer]:
+              - /url: /standard
+          - listitem [ref=e19]:
+            - link "Field Guides" [ref=e20] [cursor=pointer]:
+              - /url: /guides
+          - listitem [ref=e21]:
+            - link "Why Viaive" [ref=e22] [cursor=pointer]:
+              - /url: /why-book-with-viaive
+        - generic [ref=e23]:
+          - button "Search" [ref=e24]:
+            - img [ref=e25]
+          - link "Begin a brief" [ref=e28] [cursor=pointer]:
+            - /url: /concierge
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - img "A private overwater villa at twilight — the kind of stay Viaive's editorial advisors quietly secure for clients." [ref=e31]
+        - generic [ref=e35]:
+          - generic [ref=e38]: Editorial Intelligence · Est. since the standard mattered
+          - heading "The travel decisions that quietly shape a life." [level=1] [ref=e39]:
+            - text: The travel decisions
+            - emphasis [ref=e40]: that quietly
+            - text: shape a life.
+          - paragraph [ref=e41]: Viaive is an editorial advisory for travelers who treat every booking as a decision — not a transaction. We audit the world's hotels, ships, camps and villas, then place you inside the ones that hold the standard.
+          - generic [ref=e42]:
+            - link "Start Planning" [ref=e43] [cursor=pointer]:
+              - /url: /start-planning
+              - text: Start Planning
+              - img [ref=e44]
+            - link "Begin a private brief" [ref=e46] [cursor=pointer]:
+              - /url: /concierge
+          - generic [ref=e47]:
+            - generic [ref=e48]: I'm planning for —
+            - generic [ref=e49]:
+              - link "Family & Legacy" [ref=e50] [cursor=pointer]:
+                - /url: /?intent=family
+              - link "Fleet Intelligence" [ref=e51] [cursor=pointer]:
+                - /url: /?intent=fleet
+              - link "Somatic Silence" [ref=e52] [cursor=pointer]:
+                - /url: /?intent=somatic
+              - link "The Cruise Standard" [ref=e53] [cursor=pointer]:
+                - /url: /?intent=cruise
+        - generic [ref=e54]: Scroll · The Standard
+      - generic [ref=e56]:
+        - generic [ref=e57]: Verified Partner Programs · Real Perks, Not Affiliations
+        - generic [ref=e58]:
+          - generic [ref=e59]: Virtuoso · member network
+          - generic [ref=e60]: Four Seasons Preferred Partner
+          - generic [ref=e61]: Belmond Bellini Club
+          - generic [ref=e62]: Rosewood Elite
+          - generic [ref=e63]: Aman Inner Circle
+          - generic [ref=e64]: Rocco Forte Knights
+      - generic [ref=e66]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: Where to begin
+          - heading "Tell us what kind of trip only you would notice." [level=2] [ref=e70]:
+            - text: Tell us what kind of trip
+            - emphasis [ref=e71]: only you would notice.
+        - generic [ref=e72]:
+          - link "I know where I'm going Find the right hotel Audited suites, named upgrades, and perks under our preferred-partner programs. Booked, not searched. 27 cities · 6 partner programs" [ref=e73] [cursor=pointer]:
+            - /url: /desks/hotel?intent=hotel
+            - generic [ref=e74]:
+              - generic [ref=e75]: I know where I'm going
+              - heading "Find the right hotel" [level=3] [ref=e76]
+              - paragraph [ref=e77]: Audited suites, named upgrades, and perks under our preferred-partner programs. Booked, not searched.
+              - generic [ref=e78]:
+                - generic [ref=e79]: 27 cities · 6 partner programs
+                - img [ref=e80]
+          - link "I'm planning for the family Multi-gen, audited Properties that hold a standard for the four-year-old and the eighty-year-old at the same table. Family Desk · VIA-WO-104" [ref=e83] [cursor=pointer]:
+            - /url: /desks/family?intent=family
+            - generic [ref=e84]:
+              - generic [ref=e85]: I'm planning for the family
+              - heading "Multi-gen, audited" [level=3] [ref=e86]
+              - paragraph [ref=e87]: Properties that hold a standard for the four-year-old and the eighty-year-old at the same table.
+              - generic [ref=e88]:
+                - generic [ref=e89]: Family Desk · VIA-WO-104
+                - img [ref=e90]
+          - link "I need a quiet week Wellness & somatic silence Sanctuary properties read against sound, light, food integrity and the people running them. Sanctuary briefs · 18hr response" [ref=e93] [cursor=pointer]:
+            - /url: /start-planning?intent=somatic
+            - generic [ref=e94]:
+              - generic [ref=e95]: I need a quiet week
+              - heading "Wellness & somatic silence" [level=3] [ref=e96]
+              - paragraph [ref=e97]: Sanctuary properties read against sound, light, food integrity and the people running them.
+              - generic [ref=e98]:
+                - generic [ref=e99]: Sanctuary briefs · 18hr response
+                - img [ref=e100]
+          - link "I'm not sure yet Start with a conversation A 20-minute brief with a senior advisor. We listen for the trip behind the trip. Senior advisor · no sales call" [ref=e103] [cursor=pointer]:
+            - /url: /concierge?intent=open
+            - generic [ref=e104]:
+              - generic [ref=e105]: I'm not sure yet
+              - heading "Start with a conversation" [level=3] [ref=e106]
+              - paragraph [ref=e107]: A 20-minute brief with a senior advisor. We listen for the trip behind the trip.
+              - generic [ref=e108]:
+                - generic [ref=e109]: Senior advisor · no sales call
+                - img [ref=e110]
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e117]: The Five Desks · Phase I
+            - heading "We don't sell trips. We staff a desk for yours." [level=2] [ref=e118]:
+              - text: We don't sell trips.
+              - emphasis [ref=e119]: We staff a desk for yours.
+          - link "How the desk model works" [ref=e120] [cursor=pointer]:
+            - /url: /why-book-with-viaive
+        - generic [ref=e121]:
+          - link "Hotel Desk — Viaive VIA-WO-103 Hotel Desk Suites we have personally inspected. Upgrades, breakfasts, $100 credits and quiet preferences negotiated by name — not by booking engine. Brief the Hotel Desk →" [ref=e122] [cursor=pointer]:
+            - /url: /desks/hotel
+            - generic [ref=e123]:
+              - img "Hotel Desk — Viaive" [ref=e124]
+              - generic [ref=e126]: VIA-WO-103
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - heading "Hotel Desk" [level=3] [ref=e129]
+                - img [ref=e130]
+              - paragraph [ref=e133]: Suites we have personally inspected. Upgrades, breakfasts, $100 credits and quiet preferences negotiated by name — not by booking engine.
+              - generic [ref=e134]: Brief the Hotel Desk →
+          - link "Family Desk — Viaive VIA-WO-104 Family Desk Multi-generational journeys that hold a standard for the four-year-old and the eighty-year-old at the same table. Legacy travel, audited. Plan a Family Journey →" [ref=e135] [cursor=pointer]:
+            - /url: /desks/family
+            - generic [ref=e136]:
+              - img "Family Desk — Viaive" [ref=e137]
+              - generic [ref=e139]: VIA-WO-104
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - heading "Family Desk" [level=3] [ref=e142]
+                - img [ref=e143]
+              - paragraph [ref=e146]: Multi-generational journeys that hold a standard for the four-year-old and the eighty-year-old at the same table. Legacy travel, audited.
+              - generic [ref=e147]: Plan a Family Journey →
+          - link "Safari Desk — Viaive VIA-WO-105 Safari Desk Private conservancies, the right guide for the right migration week, and camps that haven't quietly slipped. A 14-country bench of relationships. Open the Safari Desk →" [ref=e148] [cursor=pointer]:
+            - /url: /desks/safari
+            - generic [ref=e149]:
+              - img "Safari Desk — Viaive" [ref=e150]
+              - generic [ref=e152]: VIA-WO-105
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - heading "Safari Desk" [level=3] [ref=e155]
+                - img [ref=e156]
+              - paragraph [ref=e159]: Private conservancies, the right guide for the right migration week, and camps that haven't quietly slipped. A 14-country bench of relationships.
+              - generic [ref=e160]: Open the Safari Desk →
+          - link "Asia Intelligence Desk — Viaive VIA-WO-107 Asia Intelligence Desk Tokyo, Kyoto, Seoul, Bangkok, Singapore, Hong Kong — read by a desk that lives there, not a buyer in another time zone. Global authority, locally written. Enter Asia Intelligence →" [ref=e161] [cursor=pointer]:
+            - /url: /desks/asia
+            - generic [ref=e162]:
+              - img "Asia Intelligence Desk — Viaive" [ref=e163]
+              - generic [ref=e165]: VIA-WO-107
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - heading "Asia Intelligence Desk" [level=3] [ref=e168]
+                - img [ref=e169]
+              - paragraph [ref=e172]: Tokyo, Kyoto, Seoul, Bangkok, Singapore, Hong Kong — read by a desk that lives there, not a buyer in another time zone. Global authority, locally written.
+              - generic [ref=e173]: Enter Asia Intelligence →
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - generic [ref=e176]: Step 01
+            - generic [ref=e177]: Brief
+            - generic [ref=e178]: 20 minutes. Phone or written. You tell us what matters; we listen for what you didn't say.
+          - generic [ref=e179]:
+            - generic [ref=e180]: Step 02
+            - generic [ref=e181]: Audit
+            - generic [ref=e182]: We read your dates against a live bench of rooms, captains, guides, and weather. We rule things out.
+          - generic [ref=e183]:
+            - generic [ref=e184]: Step 03
+            - generic [ref=e185]: Place
+            - generic [ref=e186]: You receive a placement, not a list. Booked under our partner programs, with perks attached.
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e191]: The Viaive Atlas · 27 Cities Audited
+            - heading "Field guides for the places we'd actually return to." [level=2] [ref=e192]:
+              - text: Field guides for the
+              - emphasis [ref=e193]: places we'd actually return to.
+          - link "View the full atlas →" [ref=e194] [cursor=pointer]:
+            - /url: /destinations
+        - generic [ref=e195]:
+          - link "Luxury travel guide to Tokyo — Viaive Atlas Japan Tokyo — The vertical standard Read the field guide →" [ref=e196] [cursor=pointer]:
+            - /url: /destinations/tokyo
+            - img "Luxury travel guide to Tokyo — Viaive Atlas" [ref=e197]
+            - generic [ref=e199]:
+              - generic [ref=e200]: Japan
+              - generic [ref=e201]: Tokyo
+              - generic [ref=e202]: — The vertical standard
+              - generic [ref=e203]: Read the field guide →
+          - link "Luxury travel guide to Paris — Viaive Atlas France Paris — Gallic standard Read the field guide →" [ref=e204] [cursor=pointer]:
+            - /url: /destinations/paris
+            - img "Luxury travel guide to Paris — Viaive Atlas" [ref=e205]
+            - generic [ref=e207]:
+              - generic [ref=e208]: France
+              - generic [ref=e209]: Paris
+              - generic [ref=e210]: — Gallic standard
+              - generic [ref=e211]: Read the field guide →
+          - link "Luxury travel guide to Maldives — Viaive Atlas Resort decision guide Maldives — 27 resorts audited Read the field guide →" [ref=e212] [cursor=pointer]:
+            - /url: /destinations/maldives
+            - img "Luxury travel guide to Maldives — Viaive Atlas" [ref=e213]
+            - generic [ref=e215]:
+              - generic [ref=e216]: Resort decision guide
+              - generic [ref=e217]: Maldives
+              - generic [ref=e218]: — 27 resorts audited
+              - generic [ref=e219]: Read the field guide →
+          - link "Luxury travel guide to Italy — Viaive Atlas Amalfi · Lake Como Italy — Mediterranean mandate Read the field guide →" [ref=e220] [cursor=pointer]:
+            - /url: /destinations/italy
+            - img "Luxury travel guide to Italy — Viaive Atlas" [ref=e221]
+            - generic [ref=e223]:
+              - generic [ref=e224]: Amalfi · Lake Como
+              - generic [ref=e225]: Italy
+              - generic [ref=e226]: — Mediterranean mandate
+              - generic [ref=e227]: Read the field guide →
+          - link "Luxury travel guide to St. Barths — Viaive Atlas French West Indies St. Barths — Villa-first audit Read the field guide →" [ref=e228] [cursor=pointer]:
+            - /url: /destinations/st-barths
+            - img "Luxury travel guide to St. Barths — Viaive Atlas" [ref=e229]
+            - generic [ref=e231]:
+              - generic [ref=e232]: French West Indies
+              - generic [ref=e233]: St. Barths
+              - generic [ref=e234]: — Villa-first audit
+              - generic [ref=e235]: Read the field guide →
+          - link "Luxury travel guide to Aspen — Viaive Atlas Colorado Aspen — Ski-week placement Read the field guide →" [ref=e236] [cursor=pointer]:
+            - /url: /destinations/aspen
+            - img "Luxury travel guide to Aspen — Viaive Atlas" [ref=e237]
+            - generic [ref=e239]:
+              - generic [ref=e240]: Colorado
+              - generic [ref=e241]: Aspen
+              - generic [ref=e242]: — Ski-week placement
+              - generic [ref=e243]: Read the field guide →
+      - generic [ref=e245]:
+        - generic [ref=e247]:
+          - generic [ref=e248]: Field Guides · Phase 2 · Highest-Revenue Atolls & Cities
+          - heading "The placements driving more than half of our 2026 inquiries." [level=2] [ref=e249]:
+            - text: The placements driving
+            - emphasis [ref=e250]: more than half of our 2026 inquiries.
+        - generic [ref=e251]:
+          - 'link "Asia · 8 audited Maldives Luxury travelers stay at Soneva Jani, Cheval Blanc Randheli, One&Only Reethi Rah or Joali for villa-quality. Best: Nov – Apr Read" [ref=e252] [cursor=pointer]':
+            - /url: "#destination-maldives"
+            - generic [ref=e253]: Asia · 8 audited
+            - generic [ref=e254]: Maldives
+            - generic [ref=e255]: Luxury travelers stay at Soneva Jani, Cheval Blanc Randheli, One&Only Reethi Rah or Joali for villa-quality.
+            - generic [ref=e256]:
+              - generic [ref=e257]: "Best: Nov – Apr"
+              - generic [ref=e258]:
+                - text: Read
+                - img [ref=e259]
+          - 'link "Asia · 8 audited Tokyo Luxury travelers stay at Aman Tokyo, Janu Tokyo, Bulgari Hotel Tokyo, or The Tokyo EDITION Toranomon. Best: Mar – May · Oct – Nov Read" [ref=e261] [cursor=pointer]':
+            - /url: "#destination-tokyo"
+            - generic [ref=e262]: Asia · 8 audited
+            - generic [ref=e263]: Tokyo
+            - generic [ref=e264]: Luxury travelers stay at Aman Tokyo, Janu Tokyo, Bulgari Hotel Tokyo, or The Tokyo EDITION Toranomon.
+            - generic [ref=e265]:
+              - generic [ref=e266]: "Best: Mar – May · Oct – Nov"
+              - generic [ref=e267]:
+                - text: Read
+                - img [ref=e268]
+          - 'link "Asia · 8 audited Bangkok Luxury travelers stay along the Chao Phraya (Mandarin Oriental, Capella) or in Sukhumvit (Park Hyatt, Rosewood, Sindhorn Kempinski). Best: Nov – Feb Read" [ref=e270] [cursor=pointer]':
+            - /url: "#destination-bangkok"
+            - generic [ref=e271]: Asia · 8 audited
+            - generic [ref=e272]: Bangkok
+            - generic [ref=e273]: Luxury travelers stay along the Chao Phraya (Mandarin Oriental, Capella) or in Sukhumvit (Park Hyatt, Rosewood, Sindhorn Kempinski).
+            - generic [ref=e274]:
+              - generic [ref=e275]: "Best: Nov – Feb"
+              - generic [ref=e276]:
+                - text: Read
+                - img [ref=e277]
+      - generic [ref=e281]:
+        - article [ref=e282]:
+          - generic [ref=e283]: Field Guide · Maldives · Last reviewed Feb 2026
+          - heading "The Maldives Resort Decision. Twelve atolls, one right placement." [level=2] [ref=e284]:
+            - text: The Maldives Resort Decision.
+            - emphasis [ref=e285]: Twelve atolls, one right placement.
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - img [ref=e288]
+              - text: 8 min read
+            - generic [ref=e291]:
+              - img [ref=e292]
+              - text: "Best: Nov – Apr"
+            - generic [ref=e294]:
+              - img [ref=e295]
+              - text: 8 audited properties
+            - generic [ref=e298]: Lead time · 9–12 months · Soneva, Cheval Blanc, One&Only
+          - generic [ref=e299]:
+            - generic [ref=e300]: The Answer · For readers in a hurry
+            - paragraph [ref=e301]: Luxury travelers stay at Soneva Jani, Cheval Blanc Randheli, One&Only Reethi Rah or Joali for villa-quality. Visit November–April. Book 9–12 months ahead. Atoll choice matters more than brand.
+          - generic [ref=e302]:
+            - generic [ref=e303]:
+              - img [ref=e304]
+              - text: The 2026 Watchlist · Maldives
+            - list [ref=e306]:
+              - listitem [ref=e307]:
+                - generic [ref=e308]: Opening
+                - generic [ref=e309]:
+                  - generic [ref=e310]: The St. Regis Vommuli expansion
+                  - generic [ref=e311]: New residence category opens Q3 2026 — book the moment inventory lists.
+              - listitem [ref=e312]:
+                - generic [ref=e313]: Opening
+                - generic [ref=e314]:
+                  - generic [ref=e315]: Capella Maldives
+                  - generic [ref=e316]: Confirmed for late 2026 in Faafu Atoll. Quiet, deep south positioning.
+              - listitem [ref=e317]:
+                - generic [ref=e318]: Refurb
+                - generic [ref=e319]:
+                  - generic [ref=e320]: Four Seasons Landaa Giraavaru
+                  - generic [ref=e321]: Mid-2026 villa refresh; avoid May–July if you are particular about finishes.
+              - listitem [ref=e322]:
+                - generic [ref=e323]: Watch
+                - generic [ref=e324]:
+                  - generic [ref=e325]: GM changes at Anantara Kihavah
+                  - generic [ref=e326]: New leadership Q1 2026 — early reports strong; our desk is watching.
+          - generic [ref=e327]:
+            - heading "Atoll, Not Brand — The Real Decision" [level=3] [ref=e328]
+            - paragraph [ref=e329]:
+              - text: "The Maldives mistake is choosing a brand and accepting the atoll that comes with it. The atoll decides the experience: house reef quality, seaplane time, water clarity, surf, sharks."
+              - link "Soneva Fushi" [ref=e330] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Soneva%20Fushi%20Maldives
+              - text: sits in a UNESCO biosphere with the country's best manta encounters June–November.
+              - link "Cheval Blanc Randheli" [ref=e331] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Cheval%20Blanc%20Randheli%20Maldives
+              - text: is in Noonu, a 45-minute seaplane that books the most stable weather window December–March.
+              - link "Six Senses Laamu" [ref=e332] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Six%20Senses%20Laamu%20Maldives
+              - text: is the only resort in its atoll — meaning no boat traffic, the clearest visibility in the country, and a ten-month-per-year surf break that brings the right kind of guest.
+            - heading "Villa Categories Worth The Step-Up" [level=3] [ref=e333]
+            - paragraph [ref=e334]:
+              - text: "Skip entry-level overwater villas at any property. They share walls, they share noise, and the value collapses against the next tier. The step-up villas worth booking:"
+              - link "Soneva Jani" [ref=e335] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Soneva%20Jani%20Maldives
+              - text: "'s 1-Bedroom Water Reserve with retractable roof;"
+              - link "One&Only Reethi Rah" [ref=e336] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=One%26Only%20Reethi%20Rah%20Maldives
+              - text: "'s Grand Beach Villa with private pool (the largest beachfront footprint in the country); and"
+              - link "Cheval Blanc Randheli" [ref=e337] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Cheval%20Blanc%20Randheli%20Maldives
+              - text: "'s 1-Bedroom Garden Water Villa — the suite our hotel desk repeats most often. For families,"
+              - link "Joali Maldives" [ref=e338] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Joali%20Maldives%20Maldives
+              - text: "'s 2-Bedroom Beach Villa with Pool is the calculated buy."
+            - heading "When To Go — And When Not To" [level=3] [ref=e339]
+            - paragraph [ref=e340]:
+              - text: "Peak: late December through March (premium pricing, perfect weather, full reefs). Shoulder: November and April (15–25% lower, identical water clarity most weeks). Avoid: May–October monsoon, unless you want surf at"
+              - link "Six Senses Laamu" [ref=e341] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Six%20Senses%20Laamu%20Maldives
+              - text: or mantas at
+              - link "Soneva Fushi" [ref=e342] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Soneva%20Fushi%20Maldives
+              - text: — both are legitimate reasons to break the rule. Plan 9–12 months ahead for Soneva, Cheval Blanc, and One&Only. The Aman Maldives waitlist is now closed for 2026 holiday weeks.
+            - heading "What Most Travelers Get Wrong" [level=3] [ref=e343]
+            - paragraph [ref=e344]:
+              - text: They optimize for the photo and forget that day four needs different food, day six needs different reef, day eight needs to leave the property. Properties solving this are
+              - link "Soneva Fushi" [ref=e345] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Soneva%20Fushi%20Maldives
+              - text: (six restaurants, two private islands accessible by boat) and
+              - link "Waldorf Astoria Maldives Ithaafushi" [ref=e346] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Waldorf%20Astoria%20Maldives%20Ithaafushi%20Maldives
+              - text: (eleven dining venues, private island add-on). Every property listed above is bookable through Viaive's preferred-partner programs — Four Seasons Preferred, Belmond Bellini, LVMH partner network — with complimentary upgrades when available, $200 resort credit on most stays, and seaplane priority where applicable.
+          - generic [ref=e347]:
+            - generic [ref=e348]: One placement, not a list
+            - heading "Want the atoll we'd actually book?" [level=3] [ref=e349]
+            - paragraph [ref=e350]: Tell us your dates and travel style. Our hotel desk returns one written placement — atoll, property, villa category, and the reason — within 18 hours.
+            - link "Start a Maldives brief" [ref=e351] [cursor=pointer]:
+              - /url: /concierge?intent=maldives
+              - text: Start a Maldives brief
+              - img [ref=e352]
+        - complementary [ref=e355]:
+          - generic [ref=e356]:
+            - generic [ref=e357]:
+              - generic [ref=e358]: Stay22 · Live Map
+              - generic [ref=e359]: Maldives
+            - iframe [ref=e361]
+            - generic [ref=e362]: Affiliate · We may earn from bookings at no cost to you.
+          - generic [ref=e363]:
+            - generic [ref=e364]:
+              - generic [ref=e365]: The 8 · Audited
+              - generic [ref=e366]: Viaive Standard
+            - list [ref=e367]:
+              - listitem [ref=e368]:
+                - generic [ref=e369]:
+                  - link "Soneva Jani" [ref=e370] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Soneva%20Jani%20Maldives
+                  - generic [ref=e371]: Villa · Noonu Atoll
+                  - generic [ref=e372]: Retractable roofs, water slides, the kindest service in the country
+                - img [ref=e373]
+              - listitem [ref=e376]:
+                - generic [ref=e377]:
+                  - link "Soneva Fushi" [ref=e378] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Soneva%20Fushi%20Maldives
+                  - generic [ref=e379]: Villa · Baa Atoll · UNESCO
+                  - generic [ref=e380]: Original barefoot-luxury standard; cinema in the jungle
+                - img [ref=e381]
+              - listitem [ref=e384]:
+                - generic [ref=e385]:
+                  - link "Cheval Blanc Randheli" [ref=e386] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Cheval%20Blanc%20Randheli%20Maldives
+                  - generic [ref=e387]: Villa · Noonu Atoll
+                  - generic [ref=e388]: LVMH service, Guerlain spa, the most refined property in the Indian Ocean
+                - img [ref=e389]
+              - listitem [ref=e392]:
+                - generic [ref=e393]:
+                  - link "One&Only Reethi Rah" [ref=e394] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=One%26Only%20Reethi%20Rah%20Maldives
+                  - generic [ref=e395]: Villa · North Malé · 50min boat
+                  - generic [ref=e396]: Largest villas in the Maldives; spectacular reef
+                - img [ref=e397]
+              - listitem [ref=e400]:
+                - generic [ref=e401]:
+                  - link "Joali Maldives" [ref=e402] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Joali%20Maldives%20Maldives
+                  - generic [ref=e403]: Villa · Raa Atoll
+                  - generic [ref=e404]: Art-led design; sister property Joali Being for wellness-only
+                - img [ref=e405]
+              - listitem [ref=e408]:
+                - generic [ref=e409]:
+                  - link "Six Senses Laamu" [ref=e410] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Six%20Senses%20Laamu%20Maldives
+                  - generic [ref=e411]: Villa · Laamu Atoll · surf
+                  - generic [ref=e412]: Only resort in the atoll; turtle conservation, ice-rink-clear water
+                - img [ref=e413]
+              - listitem [ref=e416]:
+                - generic [ref=e417]:
+                  - link "Waldorf Astoria Maldives Ithaafushi" [ref=e418] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Waldorf%20Astoria%20Maldives%20Ithaafushi%20Maldives
+                  - generic [ref=e419]: Buyout · South Malé
+                  - generic [ref=e420]: Private Island option ($80k+/night) for full buyouts
+                - img [ref=e421]
+              - listitem [ref=e424]:
+                - generic [ref=e425]:
+                  - link "The Ritz-Carlton Maldives Fari Islands" [ref=e426] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=The%20Ritz-Carlton%20Maldives%20Fari%20Islands%20Maldives
+                  - generic [ref=e427]: Villa · North Malé · 45min boat
+                  - generic [ref=e428]: Newest North Malé entrant, ring-shaped overwater architecture
+                - img [ref=e429]
+      - generic [ref=e434]:
+        - article [ref=e435]:
+          - generic [ref=e436]: Field Guide · Tokyo · Last reviewed Feb 2026
+          - heading "Tokyo, Audited. The 2026 hotel decision, sharpened." [level=2] [ref=e437]:
+            - text: Tokyo, Audited.
+            - emphasis [ref=e438]: The 2026 hotel decision, sharpened.
+          - generic [ref=e439]:
+            - generic [ref=e440]:
+              - img [ref=e441]
+              - text: 9 min read
+            - generic [ref=e444]:
+              - img [ref=e445]
+              - text: "Best: Mar – May · Oct – Nov"
+            - generic [ref=e447]:
+              - img [ref=e448]
+              - text: 8 audited properties
+            - generic [ref=e451]: Lead time · 4–6 months · Aman, Janu, Bulgari · 8 months for cherry blossom
+          - generic [ref=e452]:
+            - generic [ref=e453]: The Answer · For readers in a hurry
+            - paragraph [ref=e454]: Luxury travelers stay at Aman Tokyo, Janu Tokyo, Bulgari Hotel Tokyo, or The Tokyo EDITION Toranomon. Visit March–May or October–November. Plan 4–6 months ahead; 8 months for cherry-blossom weeks.
+          - generic [ref=e455]:
+            - generic [ref=e456]:
+              - img [ref=e457]
+              - text: The 2026 Watchlist · Tokyo
+            - list [ref=e459]:
+              - listitem [ref=e460]:
+                - generic [ref=e461]: Opening
+                - generic [ref=e462]:
+                  - generic [ref=e463]: Park Hyatt Tokyo reopening
+                  - generic [ref=e464]: Targeted Q1 2026 after multi-year refurb. New York Bar essential booking.
+              - listitem [ref=e465]:
+                - generic [ref=e466]: Opening
+                - generic [ref=e467]:
+                  - generic [ref=e468]: Capella Tokyo
+                  - generic [ref=e469]: Late 2026 in a new waterfront tower. Early-hold inventory bookable now.
+              - listitem [ref=e470]:
+                - generic [ref=e471]: Refurb
+                - generic [ref=e472]:
+                  - generic [ref=e473]: The Peninsula Tokyo
+                  - generic [ref=e474]: Public-area refresh through summer 2026 — no service disruption, but rooms unchanged.
+              - listitem [ref=e475]:
+                - generic [ref=e476]: Watch
+                - generic [ref=e477]:
+                  - generic [ref=e478]: Aman Tokyo at six years
+                  - generic [ref=e479]: Service still holding; the only six-year-old hotel in our Atlas with no slippage.
+          - generic [ref=e480]:
+            - heading "The 2026 Class — Three Names That Reset Tokyo" [level=3] [ref=e481]
+            - paragraph [ref=e482]:
+              - text: Tokyo had a decade-long Aman moment; it now has a class.
+              - link "Janu Tokyo" [ref=e483] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Janu%20Tokyo%20Tokyo
+              - text: opened in 2024 inside Azabudai Hills as Aman's louder sister — 13,000 sqft of fitness, eight restaurants, the city's best urban-resort feel.
+              - link "Bulgari Hotel Tokyo" [ref=e484] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Bulgari%20Hotel%20Tokyo%20Tokyo
+              - text: took the top six floors of Tokyo Midtown Yaesu and is the most architecturally complete opening of the past two years. And the returning
+              - link "Park Hyatt Tokyo" [ref=e485] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Park%20Hyatt%20Tokyo%20Tokyo
+              - text: reopens Q1 2026 after a multi-year renovation that brings the New York Bar back without compromising the Lost in Translation interiors. If you have not been to Tokyo since 2023, the hotel landscape has been rebuilt under you.
+            - heading "The Standard That Still Holds" [level=3] [ref=e486]
+            - paragraph [ref=e487]:
+              - link "Aman Tokyo" [ref=e488] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Aman%20Tokyo%20Tokyo
+              - text: remains the standard. Six years in, the property has not slipped — we audit it every quarter and the silence still works. The Aman Suite is the placement; the standard rooms are quieter and lower without the 33rd-floor framing. For travelers who want Japan-first rather than international,
+              - link "Hoshinoya Tokyo" [ref=e489] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Hoshinoya%20Tokyo%20Tokyo
+              - text: is a ryokan stacked seventeen floors high — tatami floors, onsen on the top floor, shoes off at the lobby — and it is the most genuinely-Japanese stay in the city. For the suite-category traveler who wants altitude,
+              - link "Four Seasons Hotel Tokyo at Otemachi" [ref=e490] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Four%20Seasons%20Hotel%20Tokyo%20at%20Otemachi%20Tokyo
+              - text: has the highest guestrooms in Tokyo and a service depth our family desk repeats every other month.
+            - heading "When To Go — Cherry Blossoms, Maples, And The Rest" [level=3] [ref=e491]
+            - paragraph [ref=e492]:
+              - text: "March 20 through April 5 for cherry blossom — book by July of the prior year, no exceptions. October 25 through November 25 for koyo, the maple season, which is quieter and arguably more beautiful. Skip June (rainy season), August (humidity, locals leave), and the New Year week (every restaurant of consequence closes). For 2026 specifically: the cherry-blossom forecast tilts a week earlier than the ten-year average per JMA preliminary data — book"
+              - link "Aman Tokyo" [ref=e493] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Aman%20Tokyo%20Tokyo
+              - text: and
+              - link "Janu Tokyo" [ref=e494] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Janu%20Tokyo%20Tokyo
+              - text: for the final ten days of March.
+            - heading "What To Skip, And What To Book Months Ahead" [level=3] [ref=e495]
+            - paragraph [ref=e496]:
+              - text: Skip Shibuya Sky at peak times, Robot Restaurant entirely, and the Roppongi Hills observation deck (use
+              - link "Janu Tokyo" [ref=e497] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Janu%20Tokyo%20Tokyo
+              - text: "'s rooftop bar instead). Book three months ahead: any kaiseki at the level of Ryugin, Den, Florilège or Kohaku. Book four months ahead: Sukiyabashi Jiro Honten (not the Roppongi outpost). Book day-of: most ramen, sushi at Sushi Sho if the desk has a relationship. Every hotel above is bookable through Viaive's preferred-partner programs — Four Seasons Preferred, Virtuoso, Aman Inner Circle — with complimentary upgrades, daily breakfast for two, and the kind of room placement the public booking engine cannot offer."
+          - generic [ref=e498]:
+            - generic [ref=e499]: The 2026 Tokyo brief
+            - heading "Want the room we'd actually place you in?" [level=3] [ref=e500]
+            - paragraph [ref=e501]: Our Asia Intelligence Desk writes back with a single property, a specific room category, and the reason — within 18 hours. Cherry-blossom dates close fast; the desk is taking briefs now.
+            - link "Start a Tokyo brief" [ref=e502] [cursor=pointer]:
+              - /url: /concierge?intent=tokyo
+              - text: Start a Tokyo brief
+              - img [ref=e503]
+        - complementary [ref=e506]:
+          - generic [ref=e507]:
+            - generic [ref=e508]:
+              - generic [ref=e509]: Stay22 · Live Map
+              - generic [ref=e510]: Tokyo
+            - iframe [ref=e512]
+            - generic [ref=e513]: Affiliate · We may earn from bookings at no cost to you.
+          - generic [ref=e514]:
+            - generic [ref=e515]:
+              - generic [ref=e516]: The 8 · Audited
+              - generic [ref=e517]: Viaive Standard
+            - list [ref=e518]:
+              - listitem [ref=e519]:
+                - generic [ref=e520]:
+                  - link "Aman Tokyo" [ref=e521] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Aman%20Tokyo%20Tokyo
+                  - generic [ref=e522]: Suite · Otemachi · Pacific Century Place
+                  - generic [ref=e523]: 84 rooms, mountain-quiet inside a financial tower; the standard
+                - img [ref=e524]
+              - listitem [ref=e527]:
+                - generic [ref=e528]:
+                  - link "Janu Tokyo" [ref=e529] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Janu%20Tokyo%20Tokyo
+                  - generic [ref=e530]: Suite · Azabudai Hills · 2024 opening
+                  - generic [ref=e531]: Aman's sister brand, more social, the city's best fitness facility
+                - img [ref=e532]
+              - listitem [ref=e535]:
+                - generic [ref=e536]:
+                  - link "Bulgari Hotel Tokyo" [ref=e537] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Bulgari%20Hotel%20Tokyo%20Tokyo
+                  - generic [ref=e538]: Suite · Yaesu · Tokyo Midtown Yaesu
+                  - generic [ref=e539]: 98 keys, top six floors, the most architecturally complete new opening
+                - img [ref=e540]
+              - listitem [ref=e543]:
+                - generic [ref=e544]:
+                  - link "The Tokyo EDITION, Toranomon" [ref=e545] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=The%20Tokyo%20EDITION%2C%20Toranomon%20Tokyo
+                  - generic [ref=e546]: Suite · Toranomon Hills
+                  - generic [ref=e547]: Best price-to-design ratio in the city; Tatsumi rooftop bar
+                - img [ref=e548]
+              - listitem [ref=e551]:
+                - generic [ref=e552]:
+                  - link "Hoshinoya Tokyo" [ref=e553] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Hoshinoya%20Tokyo%20Tokyo
+                  - generic [ref=e554]: Suite · Otemachi
+                  - generic [ref=e555]: Ryokan-in-a-tower; tatami, hot spring, no shoes from the lobby up
+                - img [ref=e556]
+              - listitem [ref=e559]:
+                - generic [ref=e560]:
+                  - link "Four Seasons Hotel Tokyo at Otemachi" [ref=e561] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Four%20Seasons%20Hotel%20Tokyo%20at%20Otemachi%20Tokyo
+                  - generic [ref=e562]: Suite · Otemachi
+                  - generic [ref=e563]: Highest rooms in the city; service depth our family desk repeats often
+                - img [ref=e564]
+              - listitem [ref=e567]:
+                - generic [ref=e568]:
+                  - link "Park Hyatt Tokyo" [ref=e569] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Park%20Hyatt%20Tokyo%20Tokyo
+                  - generic [ref=e570]: Suite · Shinjuku
+                  - generic [ref=e571]: Reopens early 2026 after full renovation — the New York Bar returns
+                - img [ref=e572]
+              - listitem [ref=e575]:
+                - generic [ref=e576]:
+                  - link "Capella Tokyo" [ref=e577] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Capella%20Tokyo%20Tokyo
+                  - generic [ref=e578]: Suite · Tokyo Bay · 2026 opening
+                  - generic [ref=e579]: Waterfront category, opens late 2026 — early holds available
+                - img [ref=e580]
+      - generic [ref=e585]:
+        - article [ref=e586]:
+          - generic [ref=e587]: Field Guide · Bangkok · Last reviewed Feb 2026
+          - heading "Bangkok, Audited. Where to actually stay in 2026." [level=2] [ref=e588]:
+            - text: Bangkok, Audited.
+            - emphasis [ref=e589]: Where to actually stay in 2026.
+          - generic [ref=e590]:
+            - generic [ref=e591]:
+              - img [ref=e592]
+              - text: 6 min read
+            - generic [ref=e595]:
+              - img [ref=e596]
+              - text: "Best: Nov – Feb"
+            - generic [ref=e598]:
+              - img [ref=e599]
+              - text: 8 audited properties
+            - generic [ref=e602]: Lead time · 4–6 weeks suites · 3 months villas · 6 months Aman
+          - generic [ref=e603]:
+            - generic [ref=e604]: The Answer · For readers in a hurry
+            - paragraph [ref=e605]: Luxury travelers stay along the Chao Phraya (Mandarin Oriental, Capella) or in Sukhumvit (Park Hyatt, Rosewood, Sindhorn Kempinski). Visit November–February. Plan 4–6 weeks ahead.
+          - generic [ref=e606]:
+            - generic [ref=e607]:
+              - img [ref=e608]
+              - text: The 2026 Watchlist · Bangkok
+            - list [ref=e610]:
+              - listitem [ref=e611]:
+                - generic [ref=e612]: Opening
+                - generic [ref=e613]:
+                  - generic [ref=e614]: Aman Nai Lert Bangkok
+                  - generic [ref=e615]: Soft-opens late 2025 in the Nai Lert family heritage compound. Highest anticipated Asia opening.
+              - listitem [ref=e616]:
+                - generic [ref=e617]: Watch
+                - generic [ref=e618]:
+                  - generic [ref=e619]: Mandarin Oriental Garden Wing
+                  - generic [ref=e620]: Best river-balcony rooms — book the renovated stack post-Q2 2026.
+              - listitem [ref=e621]:
+                - generic [ref=e622]: Refurb
+                - generic [ref=e623]:
+                  - generic [ref=e624]: Peninsula spa expansion
+                  - generic [ref=e625]: Through summer 2026 — book riverside rooms instead.
+          - generic [ref=e626]:
+            - heading "The River — Heritage, Architecture, Silence" [level=3] [ref=e627]
+            - paragraph [ref=e628]:
+              - text: On the river, the choice is between heritage and design. The
+              - link "Mandarin Oriental Bangkok" [ref=e629] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Mandarin%20Oriental%20Bangkok%20Bangkok
+              - text: holds the standard it has held for 150 years — book the Author's Wing for the literary suites, the Garden Wing for river-view balconies. A short ferry north,
+              - link "The Peninsula Bangkok" [ref=e630] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=The%20Peninsula%20Bangkok%20Bangkok
+              - text: "is the architectural counter-argument: every room faces the water, the longtail boat shuttle to BTS still runs, and the pool is the city's quiet champion. For travelers who want something newer,"
+              - link "Capella Bangkok" [ref=e631] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Capella%20Bangkok%20Bangkok
+              - text: opened in 2020 with the only riverside villas in the city; the spa is, frankly, the reason to stay.
+            - heading "Sukhumvit — Vertical, Electric, Hospitable" [level=3] [ref=e632]
+            - paragraph [ref=e633]:
+              - text: In Sukhumvit, the calculus changes. The
+              - link "Park Hyatt Bangkok" [ref=e634] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Park%20Hyatt%20Bangkok%20Bangkok
+              - text: sits inside Central Embassy and gives you the best service in the city — the rooftop bar at Penthouse is non-negotiable for arrivals. Two stations east,
+              - link "Rosewood Bangkok" [ref=e635] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Rosewood%20Bangkok%20Bangkok
+              - text: is the design hotel that actually delivers; the Lakorn European Brasserie is where Bangkok-based chefs eat on their nights off. For wellness travelers,
+              - link "Sindhorn Kempinski Hotel Bangkok" [ref=e636] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Sindhorn%20Kempinski%20Hotel%20Bangkok%20Bangkok
+              - text: overlooks Lumpini Park and books a quiet six-month annual stretch that the city's restaurant set tells nobody about.
+            - heading "Three Quiet Placements Worth A Brief" [level=3] [ref=e637]
+            - paragraph [ref=e638]:
+              - link "The Siam Hotel" [ref=e639] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=The%20Siam%20Hotel%20Bangkok
+              - text: for Thai-design immersion — only 39 suites, all with private plunge pools, and a tone our family desk returns to often. The
+              - link "Four Seasons Hotel Bangkok at Chao Phraya River" [ref=e640] [cursor=pointer]:
+                - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Four%20Seasons%20Hotel%20Bangkok%20at%20Chao%20Phraya%20River%20Bangkok
+              - text: is the suite-category default we send every other week. And for late 2025 / 2026, the Aman Nai Lert opens inside the Nai Lert family heritage compound — the most anticipated Asia opening of the year. Inventory lists 12 months out; the desk is already taking holds.
+            - heading "When, How, And What To Skip" [level=3] [ref=e641]
+            - paragraph [ref=e642]: November through February. Skip March–May. Plan four to six weeks ahead for suites, three months for villas, six for the Aman. Chatuchak before 10am, Jay Fai before her queue forms, the Jim Thompson House if you have not been, and a late afternoon on the river instead of a sunset cruise. Skip the dinner cruise. Every property above is bookable through Viaive's preferred-partner programs — Four Seasons Preferred, Virtuoso, Mandarin Oriental Fans of M.O. — with complimentary upgrades, daily breakfast, and a $100 property credit on most stays.
+          - generic [ref=e643]:
+            - generic [ref=e644]: One placement, not a list
+            - heading "Want the property we'd actually book?" [level=3] [ref=e645]
+            - paragraph [ref=e646]: The Asia Intelligence Desk reads every brief personally. You will receive one written placement within 18 hours. No newsletter, no sales call.
+            - link "Start a Bangkok brief" [ref=e647] [cursor=pointer]:
+              - /url: /concierge?intent=bangkok
+              - text: Start a Bangkok brief
+              - img [ref=e648]
+        - complementary [ref=e651]:
+          - generic [ref=e652]:
+            - generic [ref=e653]:
+              - generic [ref=e654]: Stay22 · Live Map
+              - generic [ref=e655]: Bangkok
+            - iframe [ref=e657]
+            - generic [ref=e658]: Affiliate · We may earn from bookings at no cost to you.
+          - generic [ref=e659]:
+            - generic [ref=e660]:
+              - generic [ref=e661]: The 8 · Audited
+              - generic [ref=e662]: Viaive Standard
+            - list [ref=e663]:
+              - listitem [ref=e664]:
+                - generic [ref=e665]:
+                  - link "Mandarin Oriental Bangkok" [ref=e666] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Mandarin%20Oriental%20Bangkok%20Bangkok
+                  - generic [ref=e667]: Suite · Chao Phraya River
+                  - generic [ref=e668]: 150-year heritage standard; Author's Wing suites
+                - img [ref=e669]
+              - listitem [ref=e672]:
+                - generic [ref=e673]:
+                  - link "The Peninsula Bangkok" [ref=e674] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=The%20Peninsula%20Bangkok%20Bangkok
+                  - generic [ref=e675]: Suite · Chao Phraya West Bank
+                  - generic [ref=e676]: Every room faces the river; longtail shuttle to BTS
+                - img [ref=e677]
+              - listitem [ref=e680]:
+                - generic [ref=e681]:
+                  - link "Capella Bangkok" [ref=e682] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Capella%20Bangkok%20Bangkok
+                  - generic [ref=e683]: Villa · Chao Phraya River
+                  - generic [ref=e684]: Only riverside villas in the city; 2020 opening, spa-led
+                - img [ref=e685]
+              - listitem [ref=e688]:
+                - generic [ref=e689]:
+                  - link "Park Hyatt Bangkok" [ref=e690] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Park%20Hyatt%20Bangkok%20Bangkok
+                  - generic [ref=e691]: Suite · Sukhumvit · Central Embassy
+                  - generic [ref=e692]: Best service in the city; Penthouse rooftop bar
+                - img [ref=e693]
+              - listitem [ref=e696]:
+                - generic [ref=e697]:
+                  - link "Rosewood Bangkok" [ref=e698] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Rosewood%20Bangkok%20Bangkok
+                  - generic [ref=e699]: Suite · Ploenchit · Sukhumvit
+                  - generic [ref=e700]: Design-led; Lakorn Brasserie where chefs eat on nights off
+                - img [ref=e701]
+              - listitem [ref=e704]:
+                - generic [ref=e705]:
+                  - link "Sindhorn Kempinski Hotel Bangkok" [ref=e706] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Sindhorn%20Kempinski%20Hotel%20Bangkok%20Bangkok
+                  - generic [ref=e707]: Suite · Lumpini Park
+                  - generic [ref=e708]: Wellness-led; quiet six-month annual window
+                - img [ref=e709]
+              - listitem [ref=e712]:
+                - generic [ref=e713]:
+                  - link "The Siam Hotel" [ref=e714] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=The%20Siam%20Hotel%20Bangkok
+                  - generic [ref=e715]: Villa · Dusit · Chao Phraya
+                  - generic [ref=e716]: 39 suites, all with private plunge pools, Thai-design immersion
+                - img [ref=e717]
+              - listitem [ref=e720]:
+                - generic [ref=e721]:
+                  - link "Four Seasons Hotel Bangkok at Chao Phraya River" [ref=e722] [cursor=pointer]:
+                    - /url: https://www.stay22.com/allez/booking?aid=STAY22_AID_PLACEHOLDER&q=Four%20Seasons%20Hotel%20Bangkok%20at%20Chao%20Phraya%20River%20Bangkok
+                  - generic [ref=e723]: Suite · Chao Phraya River
+                  - generic [ref=e724]: Suite-category default for our hotel desk
+                - img [ref=e725]
+      - generic [ref=e729]:
+        - generic [ref=e730]:
+          - generic [ref=e731]: The Viaive Standard · Methodology
+          - heading "A standard you can feel before you arrive." [level=2] [ref=e732]:
+            - text: A standard you can feel
+            - emphasis [ref=e733]: before you arrive.
+          - paragraph [ref=e734]: The luxury travel category is loud, paid, and quietly compromised. We built Viaive to be the opposite — an editorial intelligence desk whose only product is the next decision being the right one.
+        - generic [ref=e735]:
+          - generic [ref=e736]:
+            - generic [ref=e737]:
+              - generic [ref=e738]: "01"
+              - heading "Audited, not aggregated" [level=3] [ref=e739]
+            - paragraph [ref=e740]: Every property in our Atlas is read against a written standard — service depth, room quality, food integrity, sound. If a hotel slips, we say so before you arrive.
+          - generic [ref=e741]:
+            - generic [ref=e742]:
+              - generic [ref=e743]: "02"
+              - heading "Editorial over algorithmic" [level=3] [ref=e744]
+            - paragraph [ref=e745]: No paid placements. No SEO-padded lists of 47 hotels in Tokyo. A field guide names the four worth a return and tells you which one fits you.
+          - generic [ref=e746]:
+            - generic [ref=e747]:
+              - generic [ref=e748]: "03"
+              - heading "Advisor-led, not engine-led" [level=3] [ref=e749]
+            - paragraph [ref=e750]: Booked under our partner programs — Four Seasons Preferred, Virtuoso, Belmond Bellini, Rosewood Elite — so your stay carries perks the public site cannot show.
+          - generic [ref=e751]:
+            - generic [ref=e752]:
+              - generic [ref=e753]: "04"
+              - heading "Decision-grade intelligence" [level=3] [ref=e754]
+            - paragraph [ref=e755]: "We measure what changes the trip: weather windows, refurb status, GM tenure, captain quality, migration weeks. The data behind a quiet recommendation."
+        - link "Read the full methodology" [ref=e757] [cursor=pointer]:
+          - /url: /standard
+      - generic [ref=e759]:
+        - generic [ref=e760]:
+          - generic [ref=e761]:
+            - generic [ref=e762]: Field Guides · The Editorial
+            - heading "Read what we tell our private clients first." [level=2] [ref=e763]:
+              - text: Read what we tell
+              - emphasis [ref=e764]: our private clients first.
+          - link "All 43 field guides →" [ref=e765] [cursor=pointer]:
+            - /url: /guides
+        - generic [ref=e766]:
+          - 'link "Maldives: the resort decision, in one read Decision Guide · 14 min Maldives: the resort decision, in one read 27 properties audited against villa layout, house reef, ferry vs seaplane time, and food after night four. The four we''d return to. Read the guide →" [ref=e767] [cursor=pointer]':
+            - /url: /destinations/maldives
+            - 'img "Maldives: the resort decision, in one read" [ref=e769]'
+            - generic [ref=e770]: Decision Guide · 14 min
+            - 'heading "Maldives: the resort decision, in one read" [level=3] [ref=e771]'
+            - paragraph [ref=e772]: 27 properties audited against villa layout, house reef, ferry vs seaplane time, and food after night four. The four we'd return to.
+            - generic [ref=e773]: Read the guide →
+          - 'link "Aman''s new generation: still the standard, or quietly slipping? Editorial Intelligence · 11 min Aman''s new generation: still the standard, or quietly slipping? A property-by-property field reading of the Inner Circle portfolio — the openings that hold, the renovations to wait on, and where the silence still lives. Read the guide →" [ref=e774] [cursor=pointer]':
+            - /url: /guides/aman-standard
+            - 'img "Aman''s new generation: still the standard, or quietly slipping?" [ref=e776]'
+            - generic [ref=e777]: Editorial Intelligence · 11 min
+            - 'heading "Aman''s new generation: still the standard, or quietly slipping?" [level=3] [ref=e778]'
+            - paragraph [ref=e779]: A property-by-property field reading of the Inner Circle portfolio — the openings that hold, the renovations to wait on, and where the silence still lives.
+            - generic [ref=e780]: Read the guide →
+          - 'link "Tokyo: where to actually stay in 2026 Field Guide · 18 min Tokyo: where to actually stay in 2026 Aman, Janu, Bulgari, Four Seasons Otemachi, the new Capella — and which neighborhood is right for the trip you''re trying to take. Read the guide →" [ref=e781] [cursor=pointer]':
+            - /url: /destinations/tokyo
+            - 'img "Tokyo: where to actually stay in 2026" [ref=e783]'
+            - generic [ref=e784]: Field Guide · 18 min
+            - 'heading "Tokyo: where to actually stay in 2026" [level=3] [ref=e785]'
+            - paragraph [ref=e786]: Aman, Janu, Bulgari, Four Seasons Otemachi, the new Capella — and which neighborhood is right for the trip you're trying to take.
+            - generic [ref=e787]: Read the guide →
+      - generic [ref=e790]:
+        - generic [ref=e791]:
+          - generic [ref=e792]: The Stay Module · Powered by partner programs
+          - heading "Search audited stays. Booked under our perks." [level=2] [ref=e793]:
+            - text: Search audited stays.
+            - emphasis [ref=e794]: Booked under our perks.
+          - paragraph [ref=e795]: Live rates from Four Seasons Preferred, Belmond Bellini, Rosewood Elite and Virtuoso partner properties. Every booking through Viaive carries advisor amenities — at no cost above the public rate.
+          - generic [ref=e796]:
+            - generic [ref=e797]:
+              - img [ref=e798]
+              - text: Complimentary upgrades
+            - generic [ref=e800]:
+              - img [ref=e801]
+              - text: $100 property credit
+            - generic [ref=e803]:
+              - img [ref=e804]
+              - text: Daily breakfast for two
+        - generic [ref=e806]:
+          - generic [ref=e807]: Stay Search · Demonstration
+          - generic [ref=e808]:
+            - generic [ref=e809]:
+              - text: Destination
+              - generic [ref=e810]:
+                - img [ref=e811]
+                - textbox "Destination" [ref=e814]:
+                  - /placeholder: Tokyo, Paris, Maldives…
+            - generic [ref=e815]:
+              - generic [ref=e816]:
+                - text: Check in
+                - textbox "Check in" [ref=e817]
+              - generic [ref=e818]:
+                - text: Check out
+                - textbox "Check out" [ref=e819]
+            - generic [ref=e820]:
+              - generic [ref=e821]:
+                - text: Guests
+                - combobox "Guests" [ref=e822]:
+                  - option "1 guest" [selected]
+                  - option "2 guests"
+                  - option "3 guests"
+                  - option "4 guests"
+                  - option "5 guests"
+                  - option "6 guests"
+              - generic [ref=e823]:
+                - text: Tier
+                - combobox "Tier" [ref=e824]:
+                  - option "Suite & above" [selected]
+                  - option "Villa / Residence"
+                  - option "Resort buyout"
+            - button "Search audited stays" [ref=e825]:
+              - img [ref=e826]
+              - text: Search audited stays
+            - paragraph [ref=e829]: "Affiliate disclosure: bookings completed through Viaive's partner programs may generate commission at no cost to you. We do not mark up published rates."
+      - generic [ref=e831]:
+        - generic [ref=e832]:
+          - generic [ref=e833]:
+            - generic [ref=e834]: "27"
+            - generic [ref=e835]: Cities in the live Atlas
+          - generic [ref=e836]:
+            - generic [ref=e837]: "14"
+            - generic [ref=e838]: Country-bench safari relationships
+          - generic [ref=e839]:
+            - generic [ref=e840]: "6"
+            - generic [ref=e841]: Preferred-partner programs
+          - generic [ref=e842]:
+            - generic [ref=e843]: 92%
+            - generic [ref=e844]: Returning client rate, 24-month window
+        - generic [ref=e845]:
+          - figure "— M.K. Family of five · Returning client, four journeys" [ref=e846]:
+            - generic [ref=e847]: "\""
+            - blockquote [ref=e848]: We've travelled with the big names. Viaive is the first advisory that actually changed where we stayed — and the third night told us why.
+            - generic [ref=e849]:
+              - generic [ref=e850]: — M.K.
+              - generic [ref=e851]: Family of five · Returning client, four journeys
+          - figure "— Dr. L. Wellness brief · Bali → Kyoto" [ref=e852]:
+            - generic [ref=e853]: "\""
+            - blockquote [ref=e854]: I asked for a quiet week. They gave me a property that would not be on the first ten pages of a Google search. That is the product.
+            - generic [ref=e855]:
+              - generic [ref=e856]: — Dr. L.
+              - generic [ref=e857]: Wellness brief · Bali → Kyoto
+          - figure "— Principal Single-family office, NY" [ref=e858]:
+            - generic [ref=e859]: "\""
+            - blockquote [ref=e860]: Our family office uses Viaive for the trips that have to land. It is the most decision-grade travel intelligence we have found.
+            - generic [ref=e861]:
+              - generic [ref=e862]: — Principal
+              - generic [ref=e863]: Single-family office, NY
+      - generic [ref=e867]:
+        - generic [ref=e868]:
+          - generic [ref=e869]: The Private Brief · 20 Minutes
+          - heading "Tell us the trip only you would notice." [level=2] [ref=e870]:
+            - text: Tell us the trip
+            - emphasis [ref=e871]: only you would notice.
+          - paragraph [ref=e872]: Our concierge reads every brief personally. You receive a written placement — not a quote — within two business days. No fees, no obligation, no sales call.
+          - list [ref=e873]:
+            - listitem [ref=e874]:
+              - img [ref=e875]
+              - generic [ref=e877]: Read by a senior advisor (not routed)
+            - listitem [ref=e878]:
+              - img [ref=e879]
+              - generic [ref=e881]: Booked under preferred partner programs
+            - listitem [ref=e882]:
+              - img [ref=e883]
+              - generic [ref=e885]: Perks, upgrades, breakfasts attached
+            - listitem [ref=e886]:
+              - img [ref=e887]
+              - generic [ref=e889]: "Average response: under 18 hours"
+        - generic [ref=e895]:
+          - generic [ref=e896]: Step 1 · What kind of trip
+          - generic [ref=e897]:
+            - button "Family & Legacy" [ref=e898]
+            - button "Honeymoon" [ref=e899]
+            - button "Wellness · Somatic" [ref=e900]
+            - button "Safari" [ref=e901]
+            - button "Cruise / Yacht" [ref=e902]
+            - button "Ski Week" [ref=e903]
+            - button "City Suite" [ref=e904]
+            - button "I'm not sure yet" [ref=e905]
+          - button "Continue" [disabled] [ref=e906]:
+            - text: Continue
+            - img [ref=e907]
+      - generic [ref=e910]:
+        - generic [ref=e911]: The Quiet Letter · Monthly
+        - heading "One letter a month. The placements we'd actually make." [level=2] [ref=e912]:
+          - text: One letter a month.
+          - emphasis [ref=e913]: The placements we'd actually make.
+        - paragraph [ref=e914]: A short editorial brief from the desk — opening reports, refurb watch, the property we'd quietly switch a client to this month. No promotions, no list.
+        - generic [ref=e915]:
+          - textbox "Email" [ref=e916]:
+            - /placeholder: your@email.com
+          - button "Subscribe" [ref=e917]:
+            - text: Subscribe
+            - img [ref=e918]
+        - generic [ref=e920]: You'll receive one letter per month. Unsubscribe anytime. No sharing, no resale.
+      - generic [ref=e922]:
+        - generic [ref=e923]:
+          - generic [ref=e924]: Questions, answered editorially
+          - heading "What clients ask before the first brief." [level=2] [ref=e925]:
+            - text: What clients ask
+            - emphasis [ref=e926]: before the first brief.
+        - generic [ref=e927]:
+          - generic [ref=e928]:
+            - button "How is Viaive different from a traditional luxury travel agent?" [expanded] [ref=e929]:
+              - generic [ref=e930]: How is Viaive different from a traditional luxury travel agent?
+              - img [ref=e932]
+            - paragraph [ref=e934]: Most agencies sell volume. We run a desk model — five senior advisors, each with a verified bench of properties they have personally inspected. Every recommendation passes the Viaive Standard, an internal methodology that audits service depth, room quality, food integrity and on-the-ground sound. We publish the editorial behind it so you can read the reasoning before you book.
+          - button "Do you charge a fee?" [ref=e936]:
+            - generic [ref=e937]: Do you charge a fee?
+            - img [ref=e939]
+          - button "Will I pay more booking through Viaive?" [ref=e941]:
+            - generic [ref=e942]: Will I pay more booking through Viaive?
+            - img [ref=e944]
+          - button "How fast do you respond to a brief?" [ref=e946]:
+            - generic [ref=e947]: How fast do you respond to a brief?
+            - img [ref=e949]
+          - button "What if I'm not sure what kind of trip I want yet?" [ref=e951]:
+            - generic [ref=e952]: What if I'm not sure what kind of trip I want yet?
+            - img [ref=e954]
+          - button "Do you work with families and children?" [ref=e956]:
+            - generic [ref=e957]: Do you work with families and children?
+            - img [ref=e959]
+    - contentinfo [ref=e960]:
+      - generic [ref=e961]:
+        - generic [ref=e962]:
+          - generic [ref=e963]:
+            - generic [ref=e964]: viaive
+            - generic [ref=e965]: Editorial Intelligence · Est.
+            - paragraph [ref=e966]: A private travel advisory for people who treat every booking as a decision. Audited hotels, named relationships, and a standard you can feel before you arrive.
+            - link "Begin a private brief →" [ref=e967] [cursor=pointer]:
+              - /url: /concierge
+          - generic [ref=e968]:
+            - generic [ref=e969]:
+              - generic [ref=e970]: The Desks
+              - list [ref=e971]:
+                - listitem [ref=e972]:
+                  - link "Hotel Desk" [ref=e973] [cursor=pointer]:
+                    - /url: /desks/hotel
+                - listitem [ref=e974]:
+                  - link "Family Desk" [ref=e975] [cursor=pointer]:
+                    - /url: /desks/family
+                - listitem [ref=e976]:
+                  - link "Safari Desk" [ref=e977] [cursor=pointer]:
+                    - /url: /desks/safari
+                - listitem [ref=e978]:
+                  - link "Asia Intelligence" [ref=e979] [cursor=pointer]:
+                    - /url: /desks/asia
+                - listitem [ref=e980]:
+                  - link "Concierge Brief" [ref=e981] [cursor=pointer]:
+                    - /url: /concierge
+            - generic [ref=e982]:
+              - generic [ref=e983]: Specialty Planning
+              - list [ref=e984]:
+                - listitem [ref=e985]:
+                  - link "Honeymoons" [ref=e986] [cursor=pointer]:
+                    - /url: /honeymoons
+                - listitem [ref=e987]:
+                  - link "Villa Stays" [ref=e988] [cursor=pointer]:
+                    - /url: /villa-stays
+                - listitem [ref=e989]:
+                  - link "Wellness Travel" [ref=e990] [cursor=pointer]:
+                    - /url: /wellness-travel
+                - listitem [ref=e991]:
+                  - link "Luxury Cruises" [ref=e992] [cursor=pointer]:
+                    - /url: /luxury-cruises
+                - listitem [ref=e993]:
+                  - link "Yacht Charters" [ref=e994] [cursor=pointer]:
+                    - /url: /luxury-yacht-charters
+                - listitem [ref=e995]:
+                  - link "Private Aviation" [ref=e996] [cursor=pointer]:
+                    - /url: /private-charter
+                - listitem [ref=e997]:
+                  - link "Ski Travel" [ref=e998] [cursor=pointer]:
+                    - /url: /luxury-ski-travel
+                - listitem [ref=e999]:
+                  - link "Custom Itineraries" [ref=e1000] [cursor=pointer]:
+                    - /url: /luxury-travel-planning
+            - generic [ref=e1001]:
+              - generic [ref=e1002]: Regions
+              - list [ref=e1003]:
+                - listitem [ref=e1004]:
+                  - link "Africa" [ref=e1005] [cursor=pointer]:
+                    - /url: /regions/africa
+                - listitem [ref=e1006]:
+                  - link "Asia" [ref=e1007] [cursor=pointer]:
+                    - /url: /regions/asia
+                - listitem [ref=e1008]:
+                  - link "Europe" [ref=e1009] [cursor=pointer]:
+                    - /url: /regions/europe
+                - listitem [ref=e1010]:
+                  - link "Middle East" [ref=e1011] [cursor=pointer]:
+                    - /url: /regions/middle-east
+                - listitem [ref=e1012]:
+                  - link "Latin America" [ref=e1013] [cursor=pointer]:
+                    - /url: /regions/latin-america
+                - listitem [ref=e1014]:
+                  - link "North America" [ref=e1015] [cursor=pointer]:
+                    - /url: /regions/north-america
+                - listitem [ref=e1016]:
+                  - link "Oceania" [ref=e1017] [cursor=pointer]:
+                    - /url: /regions/oceania
+            - generic [ref=e1018]:
+              - generic [ref=e1019]: The House
+              - list [ref=e1020]:
+                - listitem [ref=e1021]:
+                  - link "The Viaive Standard" [ref=e1022] [cursor=pointer]:
+                    - /url: /standard
+                - listitem [ref=e1023]:
+                  - link "About Viaive" [ref=e1024] [cursor=pointer]:
+                    - /url: /about
+                - listitem [ref=e1025]:
+                  - link "Why Book With Us" [ref=e1026] [cursor=pointer]:
+                    - /url: /why-book-with-viaive
+                - listitem [ref=e1027]:
+                  - link "Field Guides" [ref=e1028] [cursor=pointer]:
+                    - /url: /guides
+                - listitem [ref=e1029]:
+                  - link "The Atlas" [ref=e1030] [cursor=pointer]:
+                    - /url: /destinations
+                - listitem [ref=e1031]:
+                  - link "Collections" [ref=e1032] [cursor=pointer]:
+                    - /url: /collections
+        - generic [ref=e1033]:
+          - generic [ref=e1034]: © 2026 Viaive. All editorial work is property of the desk.
+          - generic [ref=e1035]:
+            - link "Privacy" [ref=e1036] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms" [ref=e1037] [cursor=pointer]:
+              - /url: /terms
+            - link "Affiliate Disclosure" [ref=e1038] [cursor=pointer]:
+              - /url: /affiliate-disclosure
+            - link "Legal" [ref=e1039] [cursor=pointer]:
+              - /url: /legal-disclaimer
+            - link "Medical" [ref=e1040] [cursor=pointer]:
+              - /url: /medical-disclaimer
+            - link "Financial" [ref=e1041] [cursor=pointer]:
+              - /url: /financial-disclaimer
+  - button "Open Next.js Dev Tools" [ref=e1047] [cursor=pointer]:
+    - img [ref=e1048]

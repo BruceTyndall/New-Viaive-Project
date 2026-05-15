@@ -1,0 +1,286 @@
+{
+  "$schema": "viaive.payload.fields.v1",
+  "version": "1.0.0",
+  "updated": "2026-05-14",
+  "globals": {
+    "navigation": {
+      "fields": [
+        { "name": "brand", "type": "group", "fields": [
+          { "name": "wordmark", "type": "upload", "relationTo": "media" },
+          { "name": "href", "type": "text", "defaultValue": "/" }
+        ]},
+        { "name": "primaryLinks", "type": "array", "fields": [
+          { "name": "label", "type": "text", "required": true },
+          { "name": "href", "type": "text", "required": true }
+        ]},
+        { "name": "ctaLabel", "type": "text", "defaultValue": "Begin a private brief" },
+        { "name": "ctaHref", "type": "text", "defaultValue": "/concierge" }
+      ]
+    },
+    "footer": {
+      "fields": [
+        { "name": "columns", "type": "array", "fields": [
+          { "name": "title", "type": "text" },
+          { "name": "links", "type": "array", "fields": [
+            { "name": "label", "type": "text" },
+            { "name": "href", "type": "text" }
+          ]}
+        ]},
+        { "name": "legalLinks", "type": "array", "fields": [
+          { "name": "label", "type": "text" },
+          { "name": "href", "type": "text" }
+        ]},
+        { "name": "disclosure", "type": "richText" },
+        { "name": "socialLinks", "type": "array", "fields": [
+          { "name": "platform", "type": "select", "options": ["instagram","x","linkedin","substack"] },
+          { "name": "href", "type": "text" }
+        ]}
+      ]
+    },
+    "viaiveStandard": {
+      "fields": [
+        { "name": "intro", "type": "richText" },
+        { "name": "criteria", "type": "array", "minRows": 7, "maxRows": 7, "fields": [
+          { "name": "title", "type": "text", "required": true },
+          { "name": "body", "type": "richText", "required": true },
+          { "name": "icon", "type": "select", "options": ["bed","compass","scroll","key","leaf","scales","heart"] }
+        ]}
+      ]
+    },
+    "proof": {
+      "fields": [
+        { "name": "metrics", "type": "array", "fields": [
+          { "name": "value", "type": "text" },
+          { "name": "label", "type": "text" }
+        ]},
+        { "name": "quotes", "type": "array", "fields": [
+          { "name": "body", "type": "textarea" },
+          { "name": "attribution", "type": "text" },
+          { "name": "role", "type": "text" }
+        ]}
+      ]
+    },
+    "newsletter": {
+      "fields": [
+        { "name": "title", "type": "text", "defaultValue": "The Quiet Letter" },
+        { "name": "lede", "type": "richText" },
+        { "name": "placeholder", "type": "text", "defaultValue": "your@email.com" },
+        { "name": "consentText", "type": "richText" },
+        { "name": "successText", "type": "text" }
+      ]
+    },
+    "novaExitIntent": {
+      "fields": [
+        { "name": "headline", "type": "text" },
+        { "name": "italicHeadline", "type": "text" },
+        { "name": "body", "type": "richText" },
+        { "name": "ctaLabel", "type": "text" },
+        { "name": "ctaHref", "type": "text" },
+        { "name": "dismissLabel", "type": "text", "defaultValue": "Keep browsing" },
+        { "name": "minDwellSec", "type": "number", "defaultValue": 8 }
+      ]
+    }
+  },
+  "collections": {
+    "pages": {
+      "auth": false,
+      "fields": [
+        { "name": "slug", "type": "text", "unique": true, "required": true },
+        { "name": "title", "type": "text", "required": true },
+        { "name": "seo", "type": "group", "fields": [
+          { "name": "metaTitle", "type": "text" },
+          { "name": "metaDescription", "type": "textarea" },
+          { "name": "ogImage", "type": "upload", "relationTo": "media" },
+          { "name": "canonical", "type": "text" },
+          { "name": "noindex", "type": "checkbox", "defaultValue": false }
+        ]},
+        { "name": "blocks", "type": "blocks", "blocks": [
+          "HeroBlock","TrustBarBlock","IntentRouterBlock","DesksBlock","AtlasBlock",
+          "DestinationsRailBlock","DestinationGuideBlock","StandardBlock","EditorialBlock",
+          "StayModuleBlock","ProofBlock","BriefBlock","EmailCaptureBlock","FAQBlock"
+        ]},
+        { "name": "reviewStatus", "type": "select", "options": ["draft","staging","readyForReview","approved","live","archived"], "defaultValue": "draft" }
+      ]
+    },
+    "destinations": {
+      "fields": [
+        { "name": "slug", "type": "text", "unique": true, "required": true },
+        { "name": "city", "type": "text", "required": true },
+        { "name": "country", "type": "text", "required": true },
+        { "name": "region", "type": "relationship", "relationTo": "regions" },
+        { "name": "lat", "type": "number", "required": true },
+        { "name": "lng", "type": "number", "required": true },
+        { "name": "bestMonths", "type": "text" },
+        { "name": "leadTime", "type": "text" },
+        { "name": "readMinutes", "type": "number" },
+        { "name": "lastReviewed", "type": "date" },
+        { "name": "heroEyebrow", "type": "text" },
+        { "name": "h1", "type": "text", "required": true },
+        { "name": "h1Italic", "type": "text" },
+        { "name": "geoAnswer", "type": "textarea", "required": true, "admin": { "description": "≤55 words. The first paragraph an AI Overview will quote." }},
+        { "name": "hotels", "type": "array", "minRows": 6, "maxRows": 10, "fields": [
+          { "name": "name", "type": "text", "required": true },
+          { "name": "tier", "type": "select", "options": ["Palace","Resort","Boutique","Villa","Riad","Ryokan"] },
+          { "name": "neighborhood", "type": "text" },
+          { "name": "note", "type": "textarea" },
+          { "name": "cover", "type": "upload", "relationTo": "media" }
+        ]},
+        { "name": "watch2026", "type": "array", "fields": [
+          { "name": "kind", "type": "select", "options": ["Opening","Refurb","Watch"] },
+          { "name": "title", "type": "text" },
+          { "name": "note", "type": "textarea" }
+        ]},
+        { "name": "sections", "type": "array", "fields": [
+          { "name": "h2", "type": "text" },
+          { "name": "body", "type": "richText", "admin": { "description": "Use {{Hotel Name}} markers to auto-generate Stay22 deep links." }}
+        ]},
+        { "name": "ctaEyebrow", "type": "text" },
+        { "name": "ctaHeadline", "type": "text" },
+        { "name": "ctaBody", "type": "textarea" },
+        { "name": "conciergeIntent", "type": "text" },
+        { "name": "featured", "type": "checkbox", "defaultValue": false },
+        { "name": "seo", "type": "group", "fields": [
+          { "name": "metaTitle", "type": "text" },
+          { "name": "metaDescription", "type": "textarea" },
+          { "name": "ogImage", "type": "upload", "relationTo": "media" }
+        ]},
+        { "name": "reviewStatus", "type": "select", "options": ["draft","staging","readyForReview","approved","live","archived"], "defaultValue": "draft" }
+      ]
+    },
+    "desks": {
+      "fields": [
+        { "name": "slug", "type": "text", "unique": true, "required": true },
+        { "name": "name", "type": "text", "required": true },
+        { "name": "eyebrow", "type": "text" },
+        { "name": "lede", "type": "richText" },
+        { "name": "specialties", "type": "array", "fields": [{ "name": "label", "type": "text" }] },
+        { "name": "leadTime", "type": "text" },
+        { "name": "priceFloor", "type": "text" },
+        { "name": "ctaHref", "type": "text", "defaultValue": "/concierge" },
+        { "name": "sampleBriefs", "type": "array", "fields": [
+          { "name": "title", "type": "text" },
+          { "name": "outcome", "type": "textarea" }
+        ]},
+        { "name": "faq", "type": "array", "fields": [
+          { "name": "question", "type": "text" },
+          { "name": "answer", "type": "richText" }
+        ]},
+        { "name": "reviewStatus", "type": "select", "options": ["draft","staging","readyForReview","approved","live","archived"], "defaultValue": "draft" }
+      ]
+    },
+    "regions": {
+      "fields": [
+        { "name": "slug", "type": "text", "unique": true },
+        { "name": "name", "type": "text" },
+        { "name": "lead", "type": "richText" },
+        { "name": "destinations", "type": "relationship", "relationTo": "destinations", "hasMany": true }
+      ]
+    },
+    "bestOf": {
+      "fields": [
+        { "name": "slug", "type": "text", "unique": true },
+        { "name": "title", "type": "text" },
+        { "name": "intro", "type": "richText" },
+        { "name": "methodology", "type": "richText" },
+        { "name": "ranking", "type": "array", "minRows": 5, "maxRows": 15, "fields": [
+          { "name": "rank", "type": "number" },
+          { "name": "hotel", "type": "text" },
+          { "name": "verdict", "type": "text" },
+          { "name": "note", "type": "textarea" },
+          { "name": "bookHref", "type": "text", "admin": { "description": "Leave blank for auto Stay22 deep link." }}
+        ]},
+        { "name": "faq", "type": "array", "fields": [
+          { "name": "question", "type": "text" },
+          { "name": "answer", "type": "richText" }
+        ]},
+        { "name": "seo", "type": "group", "fields": [
+          { "name": "metaTitle", "type": "text" },
+          { "name": "metaDescription", "type": "textarea" }
+        ]},
+        { "name": "reviewStatus", "type": "select", "options": ["draft","staging","readyForReview","approved","live","archived"] }
+      ]
+    },
+    "compares": {
+      "fields": [
+        { "name": "slug", "type": "text", "unique": true },
+        { "name": "title", "type": "text" },
+        { "name": "intro", "type": "richText" },
+        { "name": "comparisonTable", "type": "array", "fields": [
+          { "name": "criterion", "type": "text" },
+          { "name": "optionA", "type": "text" },
+          { "name": "optionB", "type": "text" },
+          { "name": "optionC", "type": "text" }
+        ]},
+        { "name": "verdict", "type": "richText" },
+        { "name": "faq", "type": "array", "fields": [
+          { "name": "question", "type": "text" },
+          { "name": "answer", "type": "richText" }
+        ]},
+        { "name": "reviewStatus", "type": "select", "options": ["draft","staging","readyForReview","approved","live","archived"] }
+      ]
+    },
+    "posts": {
+      "fields": [
+        { "name": "slug", "type": "text", "unique": true },
+        { "name": "title", "type": "text" },
+        { "name": "dek", "type": "textarea" },
+        { "name": "author", "type": "text" },
+        { "name": "publishedAt", "type": "date" },
+        { "name": "cover", "type": "upload", "relationTo": "media" },
+        { "name": "readMinutes", "type": "number" },
+        { "name": "body", "type": "richText" },
+        { "name": "tags", "type": "array", "fields": [{ "name": "label", "type": "text" }] },
+        { "name": "reviewStatus", "type": "select", "options": ["draft","staging","readyForReview","approved","live","archived"] }
+      ]
+    },
+    "legal": {
+      "fields": [
+        { "name": "slug", "type": "text", "unique": true },
+        { "name": "title", "type": "text" },
+        { "name": "lastUpdated", "type": "date" },
+        { "name": "body", "type": "richText" },
+        { "name": "partners", "type": "array", "fields": [
+          { "name": "name", "type": "text" },
+          { "name": "role", "type": "text" },
+          { "name": "active", "type": "checkbox" }
+        ]}
+      ]
+    },
+    "briefs": {
+      "auth": false,
+      "admin": { "description": "Inbox for concierge intake. Not publicly readable." },
+      "fields": [
+        { "name": "intent", "type": "text" },
+        { "name": "desk", "type": "text" },
+        { "name": "name", "type": "text" },
+        { "name": "email", "type": "email" },
+        { "name": "phone", "type": "text" },
+        { "name": "dates", "type": "text" },
+        { "name": "partySize", "type": "number" },
+        { "name": "budget", "type": "text" },
+        { "name": "notes", "type": "textarea" },
+        { "name": "source", "type": "text" },
+        { "name": "createdAt", "type": "date" }
+      ]
+    },
+    "media": {
+      "upload": { "staticDir": "media", "adapter": "r2" },
+      "fields": [
+        { "name": "alt", "type": "text", "required": true },
+        { "name": "credit", "type": "text" },
+        { "name": "license", "type": "select", "options": ["owned","licensed","editorial"] }
+      ]
+    }
+  },
+  "sharedBlocks": {
+    "HeroBlock": ["eyebrow","headline","italicHeadline","lede","primaryCta{label,href}","secondaryCta{label,href}","image"],
+    "TrustBarBlock": ["items[]{label,logo,href}"],
+    "IntentRouterBlock": ["cards[]{eyebrow,title,blurb,href}"],
+    "DestinationsRailBlock": ["title","italicTitle","eyebrow","destinations[]→destinations"],
+    "DestinationGuideBlock": ["destination→destinations"],
+    "StayModuleBlock": ["title","lede","defaultDestination","disclosureText"],
+    "BriefBlock": ["title","lede","fields[]","submitLabel"],
+    "EmailCaptureBlock": ["overrideTitle?","overrideLede?"],
+    "FAQBlock": ["title","items[]{question,answer}"]
+  }
+}

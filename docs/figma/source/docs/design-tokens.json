@@ -1,0 +1,104 @@
+{
+  "$schema": "https://design-tokens.org/draft",
+  "meta": {
+    "name": "Viaive Digital Stone & Paper",
+    "version": "1.0.0",
+    "updated": "2026-05-14"
+  },
+  "color": {
+    "paper": { "value": "#F9F7F2", "description": "Primary background, warm cream" },
+    "paperAlt": { "value": "#F4F1EA", "description": "Inset/recessed surfaces" },
+    "stone": { "value": "#1a1a1a", "description": "Ink, borders, dark sections" },
+    "stoneAlt": { "value": "#0b0b0c", "description": "Deep tile interior on dark sections" },
+    "stoneMid": { "value": "#4A4A4A", "description": "Secondary text on paper" },
+    "gold": { "value": "#c8a96a", "description": "Accent, affiliate flag, hover signature" },
+    "goldSoft": { "value": "rgba(200,169,106,0.4)", "description": "Borders / dividers" },
+    "white": { "value": "#FFFFFF" },
+    "muted": { "value": "#9aa3b2", "description": "Refurb / neutral status" },
+    "successEditorial": { "value": "#5f7a5b", "description": "Reserved – approved badge" },
+    "warningEditorial": { "value": "#a06a2c", "description": "Reserved – review-needed" }
+  },
+  "typography": {
+    "fontFamilyDisplay": "Fraunces, serif",
+    "fontFamilyBody": "Inter, system-ui, sans-serif",
+    "scale": {
+      "eyebrow": { "size": "11px", "tracking": "0.32em", "transform": "uppercase", "lineHeight": 1.2 },
+      "metaLabel": { "size": "10px", "tracking": "0.30em", "transform": "uppercase", "lineHeight": 1.2 },
+      "body": { "size": "18px", "lineHeight": 1.7, "maxMeasure": "70ch" },
+      "bodyTight": { "size": "15px", "lineHeight": 1.6 },
+      "small": { "size": "13px", "lineHeight": 1.55 },
+      "micro": { "size": "12px", "lineHeight": 1.4 },
+      "h3": { "family": "Fraunces", "size": "30px", "lineHeight": 1.1, "tracking": "-0.01em" },
+      "h2": { "family": "Fraunces", "size": "clamp(34px,4.2vw,56px)", "lineHeight": 1.02, "tracking": "-0.02em" },
+      "h1": { "family": "Fraunces", "size": "clamp(40px,5.4vw,72px)", "lineHeight": 1, "tracking": "-0.025em" },
+      "displayItalic": { "family": "Fraunces", "weight": 300, "style": "italic" }
+    }
+  },
+  "space": {
+    "0": "0",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "8": "32px",
+    "10": "40px",
+    "12": "48px",
+    "16": "64px",
+    "20": "80px",
+    "24": "96px",
+    "32": "128px"
+  },
+  "radius": {
+    "none": "0",
+    "note": "Stone & Paper: corners stay square; no radius tokens for primary surfaces."
+  },
+  "border": {
+    "hairline": "1px solid rgba(26,26,26,0.10)",
+    "rule": "2px solid #1a1a1a",
+    "ruleGold": "2px solid #c8a96a",
+    "ruleOnDark": "2px solid rgba(255,255,255,0.20)"
+  },
+  "shadow": {
+    "paperLift": "6px 6px 0 0 #1a1a1a",
+    "paperLiftGold": "6px 6px 0 0 #c8a96a",
+    "paperLiftLg": "8px 8px 0 0 #c8a96a",
+    "paperLiftXl": "12px 12px 0 0 #1a1a1a",
+    "press": "0 0 0 0 transparent"
+  },
+  "motion": {
+    "ease": { "stone": "cubic-bezier(0.2, 0.7, 0.2, 1)", "paper": "cubic-bezier(0.4, 0, 0.2, 1)" },
+    "duration": { "fast": "150ms", "base": "200ms", "slow": "300ms", "scroll": "600ms" },
+    "patterns": {
+      "press": "translate(2px,2px) + shadow→press",
+      "railUnderline": "border-color paper→gold over 300ms"
+    }
+  },
+  "breakpoints": {
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1536px"
+  },
+  "layout": {
+    "container": "1280px",
+    "gutterMobile": "24px",
+    "gutterDesktop": "48px",
+    "measure": "70ch",
+    "sidebarStickyTop": "112px"
+  },
+  "z": {
+    "base": 0,
+    "rail": 10,
+    "nav": 40,
+    "modal": 80,
+    "exitIntent": 90
+  },
+  "affiliateDisclosure": {
+    "label": "Affiliate · We may earn from bookings at no cost to you.",
+    "tone": "neutral",
+    "placement": "every Stay22 surface footer"
+  }
+}

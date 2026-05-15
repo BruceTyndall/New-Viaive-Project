@@ -1,0 +1,208 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "VIAIVE homepage" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - text: VIAIVE
+      - navigation [ref=e5]:
+        - link "Hotel Desk" [ref=e6] [cursor=pointer]:
+          - /url: /desks/hotel
+        - link "Family" [ref=e7] [cursor=pointer]:
+          - /url: /desks/family
+        - link "Safari" [ref=e8] [cursor=pointer]:
+          - /url: /desks/safari
+        - link "Asia" [ref=e9] [cursor=pointer]:
+          - /url: /desks/asia
+        - link "Concierge" [ref=e10] [cursor=pointer]:
+          - /url: /concierge
+      - generic [ref=e11]:
+        - button "Search" [ref=e12]:
+          - img [ref=e13]
+        - link "Start Planning" [ref=e16] [cursor=pointer]:
+          - /url: /start-planning
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - img "Private overwater villa at twilight" [ref=e19]
+      - generic [ref=e23]:
+        - generic [ref=e26]: Editorial Intelligence · Private Advisory
+        - heading "The travel decisions that quietly shape a life." [level=1] [ref=e27]
+        - paragraph [ref=e28]: VIAIVE is an editorial advisory for travelers who treat every booking as a decision, not a transaction. We audit hotels, ships, camps and villas, then route you toward the ones that hold the standard.
+        - generic [ref=e29]:
+          - link "Start Planning" [ref=e30] [cursor=pointer]:
+            - /url: /start-planning
+            - text: Start Planning
+            - img [ref=e31]
+          - link "Concierge" [ref=e33] [cursor=pointer]:
+            - /url: /concierge
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: Where to begin
+        - heading "Tell us what kind of trip only you would notice." [level=2] [ref=e38]
+      - generic [ref=e39]:
+        - link "Hotel desk Find the right hotel Audited suites, named upgrades, and preferred-partner programs. Booked, not searched. Priority 1" [ref=e40] [cursor=pointer]:
+          - /url: /desks/hotel
+          - generic [ref=e41]: Hotel desk
+          - heading "Find the right hotel" [level=3] [ref=e42]
+          - paragraph [ref=e43]: Audited suites, named upgrades, and preferred-partner programs. Booked, not searched.
+          - generic [ref=e44]:
+            - generic [ref=e45]: Priority 1
+            - img [ref=e46]
+        - link "Family desk Plan for family Properties that hold a standard for the four-year-old and the eighty-year-old at the same table. Priority 2" [ref=e49] [cursor=pointer]:
+          - /url: /desks/family
+          - generic [ref=e50]: Family desk
+          - heading "Plan for family" [level=3] [ref=e51]
+          - paragraph [ref=e52]: Properties that hold a standard for the four-year-old and the eighty-year-old at the same table.
+          - generic [ref=e53]:
+            - generic [ref=e54]: Priority 2
+            - img [ref=e55]
+        - link "Safari desk Build a safari brief Camp, guide, season, aircraft, and conservation context read as one decision. Priority 3" [ref=e58] [cursor=pointer]:
+          - /url: /desks/safari
+          - generic [ref=e59]: Safari desk
+          - heading "Build a safari brief" [level=3] [ref=e60]
+          - paragraph [ref=e61]: Camp, guide, season, aircraft, and conservation context read as one decision.
+          - generic [ref=e62]:
+            - generic [ref=e63]: Priority 3
+            - img [ref=e64]
+        - link "Asia desk Navigate Asia Tokyo, Thailand, Singapore, Bali, and beyond with hotels, transfers, and timing held together. Priority 4" [ref=e67] [cursor=pointer]:
+          - /url: /desks/asia
+          - generic [ref=e68]: Asia desk
+          - heading "Navigate Asia" [level=3] [ref=e69]
+          - paragraph [ref=e70]: Tokyo, Thailand, Singapore, Bali, and beyond with hotels, transfers, and timing held together.
+          - generic [ref=e71]:
+            - generic [ref=e72]: Priority 4
+            - img [ref=e73]
+    - generic [ref=e77]:
+      - generic [ref=e78]:
+        - generic [ref=e79]: Service desks
+        - heading "Choose the advisory desk before the route expands." [level=2] [ref=e80]
+      - generic [ref=e81]:
+        - link "Hotel Advisory The right room, rate context, upgrade path, and booking channel. Open desk" [ref=e82] [cursor=pointer]:
+          - /url: /desks/hotel
+          - heading "Hotel Advisory" [level=3] [ref=e83]
+          - paragraph [ref=e84]: The right room, rate context, upgrade path, and booking channel.
+          - generic [ref=e85]:
+            - text: Open desk
+            - img [ref=e86]
+        - link "Family & Legacy Multi-generation trips planned around rhythm, care, and delight. Open desk" [ref=e89] [cursor=pointer]:
+          - /url: /desks/family
+          - heading "Family & Legacy" [level=3] [ref=e90]
+          - paragraph [ref=e91]: Multi-generation trips planned around rhythm, care, and delight.
+          - generic [ref=e92]:
+            - text: Open desk
+            - img [ref=e93]
+        - link "Safari Season, camp, guide, aircraft, and conservation standards in one brief. Open desk" [ref=e96] [cursor=pointer]:
+          - /url: /desks/safari
+          - heading "Safari" [level=3] [ref=e97]
+          - paragraph [ref=e98]: Season, camp, guide, aircraft, and conservation standards in one brief.
+          - generic [ref=e99]:
+            - text: Open desk
+            - img [ref=e100]
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - generic [ref=e106]: Featured destinations
+        - heading "Start where the hotel decision changes the trip." [level=2] [ref=e107]
+      - generic [ref=e108]:
+        - link "Tokyo destination Tokyo A city where the hotel decision changes the entire trip." [ref=e109] [cursor=pointer]:
+          - /url: /destinations/tokyo
+          - img "Tokyo destination" [ref=e111]
+          - heading "Tokyo" [level=3] [ref=e112]
+          - paragraph [ref=e113]: A city where the hotel decision changes the entire trip.
+        - link "Thailand destination Thailand Beach, city, wellness, and family routes that need careful sequencing." [ref=e114] [cursor=pointer]:
+          - /url: /destinations/thailand
+          - img "Thailand destination" [ref=e116]
+          - heading "Thailand" [level=3] [ref=e117]
+          - paragraph [ref=e118]: Beach, city, wellness, and family routes that need careful sequencing.
+        - link "Paris destination Paris Palace choices, neighborhood context, and a softer version of precision." [ref=e119] [cursor=pointer]:
+          - /url: /destinations/paris
+          - img "Paris destination" [ref=e121]
+          - heading "Paris" [level=3] [ref=e122]
+          - paragraph [ref=e123]: Palace choices, neighborhood context, and a softer version of precision.
+    - generic [ref=e125]:
+      - generic [ref=e127]:
+        - generic [ref=e128]: Guides / Intelligence
+        - heading "Answers structured for people and AI search." [level=2] [ref=e129]
+      - generic [ref=e130]:
+        - article [ref=e131]:
+          - heading "When should I use a luxury travel advisor?" [level=3] [ref=e132]
+          - paragraph [ref=e133]: "Use one when the trip has consequences: family complexity, high rates, limited inventory, or decisions that need private context."
+        - article [ref=e134]:
+          - heading "How VIAIVE thinks about hotels" [level=3] [ref=e135]
+          - paragraph [ref=e136]: We separate design theater from operational reliability, room truth, service memory, and upgrade leverage.
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - img [ref=e141]
+          - text: Hotel advisory / Stay module
+        - heading "Hotel advisory without the marketplace noise." [level=2] [ref=e143]
+        - paragraph [ref=e144]: When Stay22 is enabled, hotel modules render as disclosed monetization surfaces. Until then, the module stays clean and advisory-led.
+        - link "Open Hotel Desk" [ref=e145] [cursor=pointer]:
+          - /url: /desks/hotel
+      - generic [ref=e146]:
+        - generic [ref=e147]: Affiliate · disabled until env approved
+        - paragraph [ref=e148]: "Stay22 renders only after `STAY22_PARTNER_ID` is supplied through Doppler/runtime env."
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - generic [ref=e152]: Why VIAIVE
+        - heading "Editorial standards before inventory." [level=2] [ref=e153]
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - img [ref=e156]
+          - paragraph [ref=e158]: Decision-first
+        - generic [ref=e159]:
+          - img [ref=e160]
+          - paragraph [ref=e162]: Revenue-aware
+        - generic [ref=e163]:
+          - img [ref=e164]
+          - paragraph [ref=e166]: Bruce review
+    - generic [ref=e168]:
+      - generic [ref=e169]:
+        - generic [ref=e170]: Planning process
+        - heading "Brief, route, approve." [level=2] [ref=e171]
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - generic [ref=e174]: Step 1
+          - heading "Brief" [level=3] [ref=e175]
+          - paragraph [ref=e176]: "Tell us the trip behind the trip: occasion, constraints, taste, pace, and risk."
+        - generic [ref=e177]:
+          - generic [ref=e178]: Step 2
+          - heading "Route" [level=3] [ref=e179]
+          - paragraph [ref=e180]: "We turn intent into a short decision path: desk, destination, hotel, or concierge."
+        - generic [ref=e181]:
+          - generic [ref=e182]: Step 3
+          - heading "Approve" [level=3] [ref=e183]
+          - paragraph [ref=e184]: Bruce reviews the recommendation path before it becomes a client-facing plan.
+    - generic [ref=e186]:
+      - generic [ref=e187]: Affiliate disclosure
+      - paragraph [ref=e188]:
+        - text: Some hotel and travel-resource modules may earn VIAIVE a commission at no additional cost to travelers. We keep disclosure visible and editorial control separate from partner economics.
+        - link "Read disclosure" [ref=e189] [cursor=pointer]:
+          - /url: /affiliate-disclosure
+    - generic [ref=e191]:
+      - heading "Start with the trip only you would notice." [level=2] [ref=e192]
+      - paragraph [ref=e193]: Open a private planning brief or let the concierge desk route you to the right first move.
+      - generic [ref=e194]:
+        - link "Start Planning" [ref=e195] [cursor=pointer]:
+          - /url: /start-planning
+        - link "Concierge" [ref=e196] [cursor=pointer]:
+          - /url: /concierge
+  - contentinfo [ref=e197]:
+    - generic [ref=e198]:
+      - generic [ref=e199]:
+        - generic [ref=e200]: VIAIVE
+        - paragraph [ref=e201]: Luxury travel advisory, hotel intelligence, and concierge intake built around better decisions.
+      - generic [ref=e202]:
+        - link "Hotel Desk" [ref=e203] [cursor=pointer]:
+          - /url: /desks/hotel
+        - link "Family Desk" [ref=e204] [cursor=pointer]:
+          - /url: /desks/family
+        - link "Safari Desk" [ref=e205] [cursor=pointer]:
+          - /url: /desks/safari
+        - link "Asia Desk" [ref=e206] [cursor=pointer]:
+          - /url: /desks/asia
+        - link "Concierge" [ref=e207] [cursor=pointer]:
+          - /url: /concierge
+        - link "Affiliate Disclosure" [ref=e208] [cursor=pointer]:
+          - /url: /affiliate-disclosure
+  - button "Open Next.js Dev Tools" [ref=e214] [cursor=pointer]:
+    - img [ref=e215]
+  - alert [ref=e218]
