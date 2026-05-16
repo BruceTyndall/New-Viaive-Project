@@ -80,14 +80,7 @@ export function Hero({
             <Link
               href={primaryCta.href}
               data-analytics-id="home:hero:start-planning"
-              className="group inline-flex items-center gap-3 px-7 py-4 text-[13px] tracking-[0.18em] uppercase transition-all duration-300"
-              style={{ backgroundColor: 'var(--white)', color: 'var(--stone)' }}
-              onMouseOver={(e) => {
-                ;(e.currentTarget as HTMLElement).style.backgroundColor = 'var(--gold)'
-              }}
-              onMouseOut={(e) => {
-                ;(e.currentTarget as HTMLElement).style.backgroundColor = 'var(--white)'
-              }}
+              className="group inline-flex items-center gap-3 px-7 py-4 text-[13px] tracking-[0.18em] uppercase transition-all duration-300 bg-white text-stone hover:bg-gold"
             >
               {primaryCta.label}
               <ArrowRight size={16} aria-hidden="true" />
