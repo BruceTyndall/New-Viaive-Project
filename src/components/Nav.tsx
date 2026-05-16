@@ -8,16 +8,14 @@ const DESKS = [
   { href: '/desks/hotel', label: 'Hotel Desk', sub: 'Suites, upgrades, perks' },
   { href: '/desks/family', label: 'Family Desk', sub: 'Multi-gen, legacy travel' },
   { href: '/desks/safari', label: 'Safari Desk', sub: 'Private camps, conservancies' },
-  { href: '/desks/asia-intelligence', label: 'Asia Intelligence', sub: 'Regional authority desk' },
-  { href: '/desks/concierge', label: 'Private Brief', sub: 'Begin a custom journey' },
+  { href: '/desks/asia', label: 'Asia Desk', sub: 'Regional authority desk' },
 ]
 
-const NAV_LINKS = [
-  { href: '/destinations', label: 'Atlas' },
-  { href: '/regions', label: 'Regions' },
-  { href: '/standard', label: 'The Standard' },
-  { href: '/guides', label: 'Field Guides' },
-  { href: '/why-book-with-viaive', label: 'Why Viaive' },
+const DESTINATIONS = [
+  { href: '/destinations/thailand', label: 'Thailand' },
+  { href: '/destinations/tokyo', label: 'Tokyo' },
+  { href: '/destinations/paris', label: 'Paris' },
+  { href: '/destinations/dubai', label: 'Dubai' },
 ]
 
 export function Nav() {
@@ -45,8 +43,7 @@ export function Nav() {
         right: 0,
         zIndex: 'var(--z-nav)',
         transition: 'border-color 200ms ease, background-color 200ms ease',
-        backgroundColor: scrolled ? 'rgba(11,11,12,0.90)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
+        backgroundColor: scrolled ? 'var(--stone-alt)' : 'transparent',
         borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : '1px solid transparent',
       }}
     >
@@ -101,24 +98,52 @@ export function Nav() {
             </div>
           </li>
 
-          {NAV_LINKS.map((l) => (
-            <li key={l.href}>
-              <Link
-                href={l.href}
-                data-analytics-id={`nav:primary:${l.href.replace('/', '')}`}
-                className="text-white/90 hover:text-white transition-colors duration-150 py-2 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white hover:after:w-full after:transition-[width] after:duration-200"
-              >
-                {l.label}
-              </Link>
-            </li>
-          ))}
+          {/* Destinations dropdown */}
+          <li className="relative group">
+            <button
+              className="py-2 text-white/90 hover:text-white transition-colors duration-150"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-analytics-id="nav:destinations:toggle"
+            >
+              Destinations
+            </button>
+            <div
+              className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-[280px]"
+              role="menu"
+            >
+              <div style={{ backgroundColor: 'var(--stone-alt)', border: '1px solid rgba(255,255,255,0.08)' }} className="p-2">
+                {DESTINATIONS.map((d) => (
+                  <Link
+                    key={d.href}
+                    href={d.href}
+                    role="menuitem"
+                    data-analytics-id={`nav:destinations:${d.href.split('/').pop()}`}
+                    className="block px-4 py-3 hover:bg-white/5 transition-colors duration-150"
+                  >
+                    <span style={{ fontFamily: 'Fraunces, serif', fontSize: '17px', color: 'var(--white)' }}>{d.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <Link
+              href="/start-planning"
+              data-analytics-id="nav:primary:start-planning"
+              className="text-white/90 hover:text-white transition-colors duration-150 py-2 relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-white hover:after:w-full after:transition-[width] after:duration-200"
+            >
+              Start Planning
+            </Link>
+          </li>
         </ul>
 
         {/* Right side */}
         <div className="flex items-center gap-3">
           <Link
-            href="/desks/concierge"
-            data-analytics-id="nav:cta:begin-brief"
+            href="/concierge"
+            data-analytics-id="nav:cta:concierge"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[12px] tracking-[0.18em] uppercase text-white transition-colors duration-200 hover:bg-white hover:text-black"
             style={{ border: '1px solid rgba(255,255,255,0.30)' }}
           >
@@ -161,22 +186,33 @@ export function Nav() {
                 </Link>
               </li>
             ))}
-            {NAV_LINKS.map((l) => (
-              <li key={l.href}>
+            {DESTINATIONS.map((d) => (
+              <li key={d.href}>
                 <Link
-                  href={l.href}
+                  href={d.href}
                   onClick={() => setOpen(false)}
+                  data-analytics-id={`nav:mobile:dest-${d.href.split('/').pop()}`}
                   className="block py-3 border-b border-white/8 text-[14px] text-white/70 hover:text-white tracking-wide transition-colors duration-150"
                 >
-                  {l.label}
+                  {d.label}
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/start-planning"
+                onClick={() => setOpen(false)}
+                data-analytics-id="nav:mobile:start-planning"
+                className="block py-3 border-b border-white/8 text-[14px] text-white/70 hover:text-white tracking-wide transition-colors duration-150"
+              >
+                Start Planning
+              </Link>
+            </li>
           </ul>
           <Link
-            href="/desks/concierge"
+            href="/concierge"
             onClick={() => setOpen(false)}
-            data-analytics-id="nav:mobile:begin-brief"
+            data-analytics-id="nav:mobile:concierge"
             className="block text-center px-5 py-3.5 mt-2 text-[12px] tracking-[0.18em] uppercase text-white hover:bg-white hover:text-black transition-colors duration-200"
             style={{ border: '1px solid rgba(255,255,255,0.30)' }}
           >
