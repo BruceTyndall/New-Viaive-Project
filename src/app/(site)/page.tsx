@@ -1,11 +1,9 @@
 import type { Metadata } from 'next'
-import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
 import { TrustBar } from '@/components/TrustBar'
 import { IntentRouter } from '@/components/IntentRouter'
 import { Desks } from '@/components/Desks'
 import { EmailCapture } from '@/components/EmailCapture'
-import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Viaive — Luxury travel, decided.',
@@ -21,16 +19,12 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <>
-      <Nav />
-      <main id="main-content">
-        <Hero />
-        <TrustBar />
-        <IntentRouter />
-        <Desks />
-        <EmailCapture />
-      </main>
-      <Footer />
-    </>
+    <main id="main-content">
+      <Hero />
+      <TrustBar />
+      <IntentRouter />
+      <Desks />
+      <EmailCapture />
+    </main>
   )
 }
