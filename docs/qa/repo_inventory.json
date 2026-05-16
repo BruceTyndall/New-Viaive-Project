@@ -1,0 +1,147 @@
+{
+  "scan_date": "2026-05-15",
+  "scan_branch": "claude/distracted-clarke-edcffb",
+  "project": "viaive",
+  "stack": {
+    "next": "15.4.11",
+    "react": "19.2.6",
+    "payload": "3.84.1",
+    "tailwind": "4.3.0",
+    "typescript": "5.7.3",
+    "node_required": "^18.20.2 || >=20.9.0",
+    "pnpm": "11.0.5"
+  },
+  "phases": {
+    "phase_1_bootstrap":        { "status": "frozen", "tag": null,                       "evidence": "commit 123925b Close phase 1 exit gate" },
+    "phase_2_schema":           { "status": "frozen", "tag": "phase-2-schema-green",     "collections": 10, "globals": 6, "migrations": 3 },
+    "phase_3_tokens":           { "status": "frozen", "tag": "phase-3-tokens-green",     "css_files": 4 },
+    "phase_4_components":       { "status": "frozen", "tag": "phase-4-components-green", "components_built": 7 },
+    "phase_5a_pages_arch":      { "status": "in_progress_on_branch", "tag": null, "branch": "phase-5a-pages-arch", "commit": "836d8c2", "merged_to_main": false, "scope_drift": true },
+    "phase_5b_pages_patterns":  { "status": "not_started", "tag": null, "note": "but Phase 5a branch already added destinations + privacy routes belonging here" },
+    "phase_6_content":          { "status": "not_started", "tag": null },
+    "phase_7_integrations":     { "status": "not_started", "tag": null },
+    "phase_8_seo":              { "status": "not_started", "tag": null },
+    "phase_9_qa":               { "status": "not_started", "tag": null }
+  },
+  "counts": {
+    "total_ts_tsx_files": 42,
+    "components_built": 7,
+    "components_pending_port": 10,
+    "routes_in_master_plan": 18,
+    "routes_implemented_on_main": 1,
+    "routes_implemented_on_phase_5a_branch": 7,
+    "routes_remaining_for_5b_after_main_merge": 7,
+    "collections": 10,
+    "globals": 6,
+    "migrations": 3,
+    "payload_blocks": 6,
+    "docs_markdown_files": 32,
+    "docs_json_files": 5,
+    "screen_captures": 72
+  },
+  "components": {
+    "built_phase_4": ["Nav", "Hero", "TrustBar", "IntentRouter", "Desks", "EmailCapture", "Footer"],
+    "pending_port_from_figma_source": ["Atlas", "Brief", "DestinationGuide", "DestinationsRail", "Editorial", "FAQ", "NovaExitIntent", "Proof", "Standard", "StayModule"]
+  },
+  "collections": ["pages", "destinations", "desks", "regions", "bestOf", "compares", "posts", "legal", "briefs", "media"],
+  "globals":     ["navigation", "footer", "viaiveStandard", "proof", "newsletter", "novaExitIntent"],
+  "migrations":  ["20260515_031408_init", "20260515_191024_figma_schema", "20260515_200622_phase_2_schema_closeout"],
+  "routes": {
+    "implemented_on_main": [
+      { "path": "/",             "archetype": "homepage",    "status": "shell_only" }
+    ],
+    "implemented_on_phase_5a_branch": [
+      { "path": "/",                       "archetype": "homepage",    "status": "shell_only",       "in_plan": true,  "phase": "5a", "notes": "did NOT extend to full spine — still 7-component shell" },
+      { "path": "/start-planning",         "archetype": "intake",      "status": "built",            "in_plan": true,  "phase": "5a" },
+      { "path": "/concierge",              "archetype": "intake",      "status": "built",            "in_plan": true,  "phase": "5a" },
+      { "path": "/desks/[slug]",           "archetype": "desk",        "status": "built_dynamic",    "in_plan": true,  "phase": "5a", "notes": "dynamic route covers hotel/family/safari/asia plus a 5th not in plan" },
+      { "path": "/destinations",           "archetype": "atlas_index", "status": "built",            "in_plan": false, "phase": "out_of_scope", "notes": "Phase 5b territory" },
+      { "path": "/destinations/[slug]",    "archetype": "destination", "status": "built",            "in_plan": true,  "phase": "5b", "notes": "built early on 5a branch" },
+      { "path": "/privacy",                "archetype": "legal",       "status": "built",            "in_plan": true,  "phase": "5b", "notes": "built early on 5a branch" },
+      { "path": "/about",                  "archetype": "editorial",   "status": "built",            "in_plan": false, "phase": "not_in_master_plan" }
+    ],
+    "not_built": [
+      { "path": "/desks/hotel",                          "phase": "5a", "note": "covered by /desks/[slug] dynamic — confirm with Bruce if dynamic is acceptable" },
+      { "path": "/desks/family",                         "phase": "5a", "note": "covered by /desks/[slug] dynamic" },
+      { "path": "/desks/safari",                         "phase": "5a", "note": "covered by /desks/[slug] dynamic" },
+      { "path": "/desks/asia",                           "phase": "5a", "note": "covered by /desks/[slug] dynamic" },
+      { "path": "/destinations/thailand",                "phase": "5b", "note": "covered by /destinations/[slug] dynamic" },
+      { "path": "/destinations/tokyo",                   "phase": "5b", "note": "covered by /destinations/[slug] dynamic" },
+      { "path": "/destinations/paris",                   "phase": "5b", "note": "covered by /destinations/[slug] dynamic" },
+      { "path": "/destinations/dubai",                   "phase": "5b", "note": "covered by /destinations/[slug] dynamic" },
+      { "path": "/best/tokyo-hotels",                    "phase": "5b" },
+      { "path": "/best/paris-hotels",                    "phase": "5b" },
+      { "path": "/compare/villa-vs-hotel",               "phase": "5b" },
+      { "path": "/compare/direct-vs-advisor-vs-portal",  "phase": "5b" },
+      { "path": "/terms",                                "phase": "5b" },
+      { "path": "/affiliate-disclosure",                 "phase": "5b" }
+    ]
+  },
+  "drift_findings": [
+    {
+      "severity": "high",
+      "type": "scope_overrun",
+      "where": "phase-5a-pages-arch branch (commit 836d8c2)",
+      "issue": "Phase 5a built /destinations index, /destinations/[slug], and /privacy — all of which belong to Phase 5b in CLAUDE.md.",
+      "action": "Bruce decides: (a) accept overrun and shrink Phase 5b accordingly, or (b) revert those routes before merging"
+    },
+    {
+      "severity": "high",
+      "type": "scope_omission",
+      "where": "phase-5a-pages-arch branch",
+      "issue": "Master plan requires the homepage / to be extended to the full 17-component spine in Phase 5a. The branch left the homepage at the 7-component Phase 4 shell.",
+      "action": "Add to Phase 5a before merging, OR explicitly move full-spine homepage to Phase 5b"
+    },
+    {
+      "severity": "high",
+      "type": "missing_component_layer",
+      "where": "phase-5a-pages-arch branch",
+      "issue": "10 Figma components (Atlas, Brief, DestinationGuide, DestinationsRail, Editorial, FAQ, NovaExitIntent, Proof, Standard, StayModule) were NOT ported to src/components/. Pages were built with inline styles instead, which breaks the Phase 4 component contract and will create token drift.",
+      "action": "Port the 10 components from docs/figma/source/src/app/components/ to src/components/ before Phase 5a green tag"
+    },
+    {
+      "severity": "medium",
+      "type": "off_plan_route",
+      "where": "phase-5a-pages-arch branch",
+      "issue": "/about page exists but is not in the 18-route master plan.",
+      "action": "Bruce decides: add /about to plan or remove the page"
+    },
+    {
+      "severity": "medium",
+      "type": "design_violation_in_frozen_area",
+      "where": "src/components/Nav.tsx",
+      "issue": "Uses `backdropFilter: blur(20px)` which violates the 'No blur in shadows' design rule. Was shipped in Phase 4, now in frozen area.",
+      "action": "Requires Bruce's explicit approval to fix the frozen component"
+    },
+    {
+      "severity": "low",
+      "type": "stale_worktree_branches",
+      "where": "git branches",
+      "issue": "5 claude/* worktree branches exist (brave-shirley, fervent-goldwasser, infallible-haslett, jolly-pasteur, distracted-clarke). All are at <= main HEAD with 0 commits ahead. None hold real Phase 5 work.",
+      "action": "Prune the four sister branches after confirming no uncommitted local work in their worktrees"
+    }
+  ],
+  "frozen_area_integrity": {
+    "diff_vs_phase_4_tag": "clean",
+    "diff_command": "git diff phase-4-components-green..HEAD -- src/components/ src/styles/ src/payload/ src/collections/ src/globals/ src/migrations/",
+    "result": "no modifications"
+  },
+  "worktrees": [
+    { "path": "/Users/brucetyndall/Projects/GitHub/New Viaive Project",                                              "branch": "phase-5a-pages-arch",            "commit": "836d8c2", "role": "primary" },
+    { "path": "/Users/brucetyndall/Projects/GitHub/New Viaive Project/.claude/worktrees/distracted-clarke-edcffb", "branch": "claude/distracted-clarke-edcffb", "commit": "cebdfa1", "role": "audit_session" }
+  ],
+  "sister_claude_branches_to_prune": [
+    "claude/brave-shirley-655916",
+    "claude/fervent-goldwasser-cfce82",
+    "claude/infallible-haslett-e076bd",
+    "claude/jolly-pasteur-06d53d"
+  ],
+  "doppler_env_keys": ["DATABASE_URL", "PAYLOAD_SECRET", "R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY", "R2_BUCKET", "NEXT_PUBLIC_R2_PUBLIC_URL", "STAY22_LMA_ID", "STAY22_AID", "NEXT_PUBLIC_SITE_URL", "POSTHOG_KEY", "SENTRY_DSN"],
+  "documentation": {
+    "design_package_root": "docs/figma/source/docs/",
+    "architecture_root": "docs/architecture/",
+    "qa_root": "docs/qa/",
+    "screen_capture_root": "docs/screens/",
+    "specs_present": ["DESIGN_SYSTEM.md", "COMPONENT_LIBRARY.md", "PAGE_ARCHETYPE_SPECS.md", "ROUTE_TO_TEMPLATE_MAP.md", "CMS_FIELD_MAPPING.md", "RESPONSIVE_BEHAVIOR.md", "INTERACTION_MOTION_SPEC.md", "SEO_GEO_CONTENT_BLOCK_SPEC.md", "AFFILIATE_MODULE_DESIGN_SPEC.md", "ACCESSIBILITY_SPEC.md", "IMPLEMENTATION_HANDOFF.md", "IMAGE_ASSET_DIRECTION.md"]
+  }
+}

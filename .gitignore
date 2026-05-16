@@ -48,3 +48,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# Per-session drift-check reports (the script regenerates these each run)
+/docs/qa/drift-check-*.json
