@@ -1,177 +1,249 @@
-# Handover — Phase 5a
+# Handover — Phase 5b
 
-**Generated:** 2026-05-15 (audit + drift-fix session)
-**For the next agent picking up Phase 5a**
+**Generated:** 2026-05-15 (post Phase 5a tag)
+**For the next agent picking up Phase 5b**
 
 ---
 
-## ⚠️ Model to use for this phase: **Sonnet 4.6**
+## ⚠️ Model to use for this phase: **Haiku 4.5**
 
-Per the phase table in [CLAUDE.md](../CLAUDE.md). Do not start this work on Haiku — the component-port work touches enough files that Sonnet's larger context and stronger reasoning matter.
+Per the phase table in [CLAUDE.md](../CLAUDE.md). Phase 5b is 11 pattern routes — each is a thin composition of already-built components over static data. No new components are needed. Haiku is the right model.
 
 ---
 
 ## What just happened
 
-The previous Phase 5a attempt (commit `836d8c2` on branch `phase-5a-pages-arch`) **drifted from the master plan** in three ways:
+Phase 5a (Sonnet 4.6) is complete and tagged `phase-5a-pages-green` at `ea90a5d`.
 
-1. Built routes that belong to Phase 5b (`/destinations`, `/destinations/[slug]`, `/privacy`)
-2. Built `/about`, which is not in the master plan at all
-3. Skipped the 10-component port and wrote pages with inline styles instead
+**What was built:**
+- 10 missing components (Atlas, Brief, DestinationGuide, DestinationsRail, Editorial, FAQ, NovaExitIntent, Proof, Standard, StayModule)
+- 7 Phase 5a routes: `/`, `/start-planning`, `/concierge`, `/desks/hotel`, `/desks/family`, `/desks/safari`, `/desks/asia`
+- `src/data/destinations.ts` — static fallback data for 4 destinations (Thailand/Bangkok, Tokyo, Paris, Dubai)
+- `src/types/destination.ts` — `DestinationConfig` type used by destination pages
+- `src/app/(site)/_actions/brief.ts` — server action for Brief form submissions
 
-Per Bruce's directive ("no drift, 100%"), that branch is being abandoned. You start clean from main.
-
-A separate fix landed in **this** session:
-- `src/components/Nav.tsx` — removed `backdropFilter: blur(20px)` (design rule violation), fixed off-plan link targets, restructured the dropdowns to map only to the 18 planned routes.
-- Added `scripts/drift-check.mjs` + `pnpm drift:check` — the gate you must pass at session start and session end.
-- Rewrote [CLAUDE.md](../CLAUDE.md) with the zero-drift policy and per-phase model assignments.
+All 17 components are now in `src/components/`. All are frozen. Do not modify them.
 
 ---
 
 ## Before you do ANYTHING
 
 ```bash
-# 1. Pick up the merged main with the Nav fix + drift check tooling
+# 1. Pick up latest main
 git checkout main && git pull
 
-# 2. Confirm Phase 4 was re-tagged after the Nav blur fix
-git tag --contains $(git rev-parse main) | grep phase-4-components-green
-#   → must print "phase-4-components-green"
-#   If not: the Nav-fix PR has not been re-tagged yet. Stop and tell Bruce.
+# 2. Confirm phase-5a-pages-green tag exists on main
+git tag | grep green
+# → must show phase-5a-pages-green among others
 
-# 3. Confirm zero drift on main
+# 3. Zero-drift gate
 pnpm drift:check
-#   → must exit 0 ("clean — no drift.")
-#   If it doesn't, stop and tell Bruce.
+# → must exit 0 ("clean — no drift.")
+# 11 info items (the 11 Phase 5b routes) are expected and not violations
 
-# 4. Confirm the abandoned 5a branch is gone
-git branch -a | grep phase-5a-pages-arch
-#   → should print nothing. If it still exists, ask Bruce whether to delete:
-#   git branch -D phase-5a-pages-arch
-#   git push origin --delete phase-5a-pages-arch
+# 4. Start your branch
+git checkout -b phase-5b-pages-patterns
 
-# 5. Start fresh
-git checkout -b phase-5a-pages
+# 5. Boot dev server
 pnpm dev:doppler
 ```
 
 ---
 
-## Phase 5a — exact scope
+## Phase 5b — exact scope
 
-Two deliverables. Do them in this order.
+11 routes. No new components. Data composition only.
 
-### Deliverable 1 — Port the 10 missing components (prerequisite)
+### Route group: Destinations (4 routes)
 
-The master plan has 17 components. Phase 4 built 7. Build the remaining 10 first, **before** any page work. Source files live in `docs/figma/source/src/app/components/`.
-
-Each component must:
-- Use `var(--paper)`, `var(--stone)`, `var(--gold)` etc. — no hard-coded hex
-- Use solid offset shadows from `src/styles/tokens.css` — no `blur(...)` or `backdrop-filter`
-- Square corners — no `border-radius` on primary surfaces
-- Be a **presentational** component — props in, JSX out. No Payload fetches inside the component.
-- Carry `data-analytics-id="<route-or-slot>:<intent>"` on every interactive element
-
-| # | Component | Source | Notes |
+| # | Route | Archetype | Spine |
 |---|---|---|---|
-| 1 | `Atlas` | `docs/figma/source/src/app/components/Atlas.tsx` | Homepage destination grid |
-| 2 | `Brief` | `docs/figma/source/src/app/components/Brief.tsx` | Lead-capture form. Submit handler → server action that writes to `briefs` collection |
-| 3 | `DestinationGuide` | `docs/figma/source/src/app/components/DestinationGuide.tsx` | Pillar destination page body. Uses `{{Hotel Name}}` markers resolved via `lib/stay22.ts` |
-| 4 | `DestinationsRail` | `docs/figma/source/src/app/components/DestinationsRail.tsx` | Horizontal rail of destination cards |
-| 5 | `Editorial` | `docs/figma/source/src/app/components/Editorial.tsx` | Anonymised case-study blocks |
-| 6 | `FAQ` | `docs/figma/source/src/app/components/FAQ.tsx` | Accordion. Emits FAQPage JSON-LD |
-| 7 | `NovaExitIntent` | `docs/figma/source/src/app/components/NovaExitIntent.tsx` | Exit-intent modal, z-index `--z-exit-intent` (90) |
-| 8 | `Proof` | `docs/figma/source/src/app/components/Proof.tsx` | Social proof / testimonials block |
-| 9 | `Standard` | `docs/figma/source/src/app/components/Standard.tsx` | "The Viaive Standard" content block |
-| 10 | `StayModule` | `docs/figma/source/src/app/components/StayModule.tsx` | Stay22 hotel module with audited list. All hrefs via `lib/stay22.ts` |
+| 1 | `src/app/(site)/destinations/thailand/page.tsx` | destination | Nav · DestinationGuide · StayModule · EmailCapture · FAQ · Footer · NovaExitIntent |
+| 2 | `src/app/(site)/destinations/tokyo/page.tsx` | destination | same |
+| 3 | `src/app/(site)/destinations/paris/page.tsx` | destination | same |
+| 4 | `src/app/(site)/destinations/dubai/page.tsx` | destination | same |
 
-Each one lands at `src/components/<Name>.tsx`. After each, run `pnpm drift:check` — it should still exit 0 because the component name is in the master list.
+Static destination data lives in `src/data/destinations.ts` — **all 4 destinations are already there**. Use the same Payload-with-static-fallback pattern from `/`:
 
-### Deliverable 2 — Build the 7 Phase 5a routes
-
-In this order, one PR each is fine if you prefer, or one bundled. Bruce will tell you on the first AskUserQuestion.
-
-| # | Route file | Archetype | Spine (per ROUTE_TO_TEMPLATE_MAP.md) |
-|---|---|---|---|
-| 1 | `src/app/(site)/page.tsx` (extend existing) | homepage | Nav · Hero · TrustBar · IntentRouter · Desks · Atlas · DestinationsRail · DestinationGuide×3 · Standard · Editorial · StayModule · Proof · Brief · EmailCapture · FAQ · Footer · NovaExitIntent |
-| 2 | `src/app/(site)/start-planning/page.tsx` | intake | Nav · Hero · IntentRouter · Brief · Proof · FAQ · Footer |
-| 3 | `src/app/(site)/concierge/page.tsx` | intake | Nav · Hero · TrustBar · Brief · Standard · Proof · FAQ · Footer |
-| 4 | `src/app/(site)/desks/hotel/page.tsx` | desk | Nav · Hero · StayModule · Editorial · Proof · FAQ · Brief · Footer |
-| 5 | `src/app/(site)/desks/family/page.tsx` | desk | Nav · Hero · Editorial · Proof · FAQ · Brief · Footer |
-| 6 | `src/app/(site)/desks/safari/page.tsx` | desk | Nav · Hero · Editorial · Proof · FAQ · Brief · Footer |
-| 7 | `src/app/(site)/desks/asia/page.tsx` | desk | Nav · Hero · DestinationsRail · Editorial · Proof · FAQ · Brief · Footer |
-
-**No dynamic segments.** Each desk gets its own folder. The master plan and drift check enforce this.
-
-**Each page is a server component** that fetches via the Payload local API and passes data as props:
 ```ts
-import { getPayload } from 'payload'
-import config from '@payload-config'
-const payload = await getPayload({ config })
-const desk = await payload.find({ collection: 'desks', where: { slug: { equals: 'hotel' } }, limit: 1 })
+import { STATIC_DESTINATIONS } from '@/data/destinations'
+
+export default async function ThailandPage() {
+  let dest = STATIC_DESTINATIONS.find(d => d.slug === 'thailand')!
+  try {
+    const payload = await getPayload({ config })
+    const result = await payload.find({ collection: 'destinations', where: { slug: { equals: 'thailand' } }, limit: 1 })
+    if (result.docs[0]) dest = result.docs[0] as unknown as DestinationConfig
+  } catch { /* Payload not seeded yet — static fallback */ }
+  return (
+    <>
+      <Nav />
+      <main id="main-content">
+        <DestinationGuide destination={dest} />
+        <StayModule hotels={dest.hotels} />
+        <EmailCapture />
+        <FAQ />
+        <NovaExitIntent />
+      </main>
+      <Footer />
+    </>
+  )
+}
 ```
 
-**Cherry-pick the briefs server-action pattern from the abandoned branch:**
-```bash
-git show 836d8c2 -- 'src/app/(site)/_actions/brief.ts' > src/app/\(site\)/_actions/brief.ts
-```
-That file is the one piece of the previous attempt worth keeping. Review it before committing — it's ~30 lines.
+**Metadata per destination:** Use `h1` + `geoAnswer` from `DestinationConfig` to populate `title` and `description`. Example for Thailand:
+- title: `'Where to Stay in Bangkok 2026 — Viaive'`
+- description: the `geoAnswer` field from `STATIC_DESTINATIONS`
+
+**JSON-LD:** Add `TouristDestination` + `FAQPage` schema on each destination page (see archetype spec in `docs/figma/source/docs/PAGE_ARCHETYPE_SPECS.md` § 4 Destination).
+
+---
+
+### Route group: Best-of (2 routes)
+
+| # | Route | Archetype | Spine |
+|---|---|---|---|
+| 5 | `src/app/(site)/best/tokyo-hotels/page.tsx` | best-of | Nav · Hero · Editorial · StayModule · FAQ · Footer · NovaExitIntent |
+| 6 | `src/app/(site)/best/paris-hotels/page.tsx` | best-of | same |
+
+These are pure static pages — no Payload collection for best-of exists yet. Compose from existing components:
+- `Hero` — headline from props (pass `eyebrow`, `h1`, `h1Italic` as hardcoded strings)
+- `Editorial` — 3 anonymized case-study blocks (hardcoded, same as desk pages)
+- `StayModule` — pull hotels from the matching `DestinationConfig` in `STATIC_DESTINATIONS`
+  - Tokyo: `STATIC_DESTINATIONS.find(d => d.slug === 'tokyo')`
+  - Paris: `STATIC_DESTINATIONS.find(d => d.slug === 'paris')`
+- `FAQ` — hardcoded Q&A list tailored to "best hotels [city]" queries
+
+**Add `ItemList` JSON-LD** with the ranked hotels from `StayModule.hotels` (required per archetype spec).
+
+**Metadata:**
+- Tokyo: `title: 'Best Hotels in Tokyo 2026 — Viaive'`
+- Paris: `title: 'Best Hotels in Paris 2026 — Viaive'`
+
+---
+
+### Route group: Compare (2 routes)
+
+| # | Route | Archetype | Spine |
+|---|---|---|---|
+| 7 | `src/app/(site)/compare/villa-vs-hotel/page.tsx` | compare | Nav · Hero · FAQ · Brief · Footer |
+| 8 | `src/app/(site)/compare/direct-vs-advisor-vs-portal/page.tsx` | compare | same |
+
+Both are no-affiliate pages designed to drive Brief. Keep them simple:
+- `Hero` — comparison question as headline
+- `FAQ` — comparison Q&A (who wins and why, hardcoded)
+- `Brief` — source prop identifies the page (`source="compare-villa-vs-hotel"`)
+
+No `StayModule` on compare pages. No `NovaExitIntent` on compare pages (these are already bottom-funnel, don't interrupt).
+
+**Metadata:**
+- Villa vs Hotel: `title: 'Villa vs Hotel — Which to Book — Viaive'`
+- Direct vs Advisor: `title: 'Book Direct vs Travel Advisor vs Portal — Viaive'`
+
+---
+
+### Route group: Legal (3 routes)
+
+| # | Route | Archetype | Spine |
+|---|---|---|---|
+| 9 | `src/app/(site)/privacy/page.tsx` | legal | Nav · richText body · Footer |
+| 10 | `src/app/(site)/terms/page.tsx` | legal | Nav · richText body · Footer |
+| 11 | `src/app/(site)/affiliate-disclosure/page.tsx` | legal | Nav · richText body · partners table · Footer |
+
+Rules per archetype spec:
+- Body capped at 70ch (`max-w-[70ch] mx-auto`)
+- `lastUpdated` field renders at top (hardcode as `'May 2026'`)
+- Affiliate disclosure additionally renders a `partners[]` table (Stay22, Brevo)
+- All three pages link to each other in the footer or body
+
+These are pure server components — no Payload fetch needed, all content hardcoded inline. Keep them minimal; they exist for compliance, not for SEO.
+
+---
+
+## Phase 5a learnings (do not repeat these errors)
+
+1. **No event handlers in RSC.** All 17 components are server-safe already. If a component needs `onClick`, `onSubmit`, etc., it already uses `'use client'`. Do not add `'use client'` to page files — they are server components.
+
+2. **DestinationsRail is prop-driven.** Pass destinations as a prop; do not hard-code data inside the component.
+
+3. **Brief requires `source` prop.** Always pass `<Brief source="<route-slug>" />` — this is how the server action knows which page originated the brief.
+
+4. **Static data fallback pattern.** Payload collections are not seeded yet for most content. Every page that touches Payload must wrap the fetch in `try/catch` and fall back to static data. See `src/app/(site)/page.tsx` for the canonical example.
+
+5. **NovaExitIntent is a portal-style modal.** It renders itself into the document body. Place it as the last child of the component tree, not inside `<main>`. See the homepage for the pattern.
+
+6. **All affiliate hrefs must go through `lib/stay22.ts`.** The `StayModule` component already does this internally. Do not construct Stay22 URLs by hand in page files.
 
 ---
 
 ## Verification before opening the PR
 
 ```bash
-pnpm drift:check                   # exit 0 required
+pnpm drift:check                   # exit 0 required — 0 info items remaining
 npx tsc --noEmit                   # 0 errors required
-for r in / /start-planning /concierge /desks/hotel /desks/family /desks/safari /desks/asia; do
+
+# All 11 new routes must return 200
+for r in \
+  /destinations/thailand \
+  /destinations/tokyo \
+  /destinations/paris \
+  /destinations/dubai \
+  /best/tokyo-hotels \
+  /best/paris-hotels \
+  /compare/villa-vs-hotel \
+  /compare/direct-vs-advisor-vs-portal \
+  /privacy \
+  /terms \
+  /affiliate-disclosure; do
   printf '%s → %s\n' "$r" "$(curl -s -o /dev/null -w '%{http_code}' "http://localhost:3000$r")"
 done
 # Every route must print 200
+
+# The 7 Phase 5a routes must still return 200 (regression check)
+for r in / /start-planning /concierge /desks/hotel /desks/family /desks/safari /desks/asia; do
+  printf '%s → %s\n' "$r" "$(curl -s -o /dev/null -w '%{http_code}' "http://localhost:3000$r")"
+done
 ```
 
----
-
-## Reference files (read these first, in this order)
-
-1. [CLAUDE.md](../CLAUDE.md) — zero-drift policy + phase model assignments
-2. [docs/qa/AUDIT_REPORT_2026-05-15.md](qa/AUDIT_REPORT_2026-05-15.md) — what drifted and why
-3. [docs/figma/source/docs/PAGE_ARCHETYPE_SPECS.md](figma/source/docs/PAGE_ARCHETYPE_SPECS.md) — the 7 archetypes
-4. [docs/figma/source/docs/ROUTE_TO_TEMPLATE_MAP.md](figma/source/docs/ROUTE_TO_TEMPLATE_MAP.md) — route ↔ component mapping
-5. [docs/figma/source/docs/CMS_FIELD_MAPPING.md](figma/source/docs/CMS_FIELD_MAPPING.md) — Payload field shapes
-6. [docs/figma/source/docs/design-tokens.json](figma/source/docs/design-tokens.json) — the source of truth for tokens
-7. `docs/screens/<route>-{320,768,1280,1920}.png` — Figma screen references per route
+After all checks pass, run `pnpm drift:check` one final time — it should now show **0 info** (all 18 routes exist).
 
 ---
 
-## When you finish Phase 5a
+## Reference files (read these first)
+
+1. [CLAUDE.md](../CLAUDE.md) — zero-drift policy + stop conditions
+2. [docs/figma/source/docs/ROUTE_TO_TEMPLATE_MAP.md](figma/source/docs/ROUTE_TO_TEMPLATE_MAP.md) — authoritative route ↔ component spines
+3. [docs/figma/source/docs/PAGE_ARCHETYPE_SPECS.md](figma/source/docs/PAGE_ARCHETYPE_SPECS.md) — archetype rules (destination, best-of, compare, legal)
+4. [src/data/destinations.ts](../src/data/destinations.ts) — static destination data (all 4 cities)
+5. [src/types/destination.ts](../src/types/destination.ts) — `DestinationConfig` type
+6. [src/app/(site)/page.tsx](../src/app/(site)/page.tsx) — canonical Payload-with-fallback pattern
+7. [src/app/(site)/desks/hotel/page.tsx](../src/app/(site)/desks/hotel/page.tsx) — simplest route pattern to copy
+
+---
+
+## End-of-session protocol
 
 After Bruce replies "approved and merged" to your PR:
 
 ```bash
 git checkout main && git pull
-git tag phase-5a-pages-green main
-git push origin phase-5a-pages-green
-pnpm drift:check        # must exit 0 — confirms green state
+git tag phase-5b-pages-green main
+git push origin phase-5b-pages-green
+pnpm drift:check        # must exit 0 — 0 info items (all 18 routes exist)
 ```
 
-Then rewrite **this file** for the next agent with:
-- Header: `## ⚠️ Model to use for this phase: Haiku 4.5` (Phase 5b)
-- The exact route folders to create for the 11 Phase 5b routes
-- Any Phase 5a learnings worth carrying forward
+Then rewrite **this file** for Phase 6 (Haiku 4.5 — content & CMS seeding).
 
-The chain continues: 5b (Haiku) → 6 (Haiku) → 7 (Sonnet) → 8 (Sonnet) → 9 (Opus). Each handover names the next model.
+The chain: 5b (Haiku) → **6 (Haiku)** → 7 (Sonnet) → 8 (Sonnet) → 9 (Opus).
 
 ---
 
 ## What NOT to do
 
-- Do **not** build `/about` — not in the plan
-- Do **not** build `/destinations/*` or `/best/*` or `/compare/*` — those are Phase 5b
-- Do **not** build `/privacy`, `/terms`, `/affiliate-disclosure` — those are Phase 5b
-- Do **not** use dynamic `[slug]` route segments — every route is a discrete folder
-- Do **not** fetch data inside components — server pages fetch, components receive props
-- Do **not** modify any Phase 2/3/4 frozen file without telling Bruce first
+- Do **not** build any route outside the 11 listed above — all others are built or out of scope
+- Do **not** create new components — all 17 are built and frozen
+- Do **not** modify any file in `src/components/`, `src/styles/`, `src/payload/`, `src/collections/`, `src/globals/`, `src/migrations/`, `src/blocks/`, `src/fields/`, `src/access/`
+- Do **not** use dynamic `[slug]` segments — every route is a discrete folder
+- Do **not** construct a Stay22 URL outside `lib/stay22.ts`
 - Do **not** import a font outside `src/styles/fonts.css`
-- Do **not** construct an affiliate URL outside `lib/stay22.ts`
 - Do **not** skip `pnpm drift:check` at session start or session end
